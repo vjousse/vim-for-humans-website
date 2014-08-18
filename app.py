@@ -15,9 +15,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', key=stripe_keys['publishable_key'])
 
-@app.route('/payment')
-def payment():
-    return render_template('payment.html', key=stripe_keys['publishable_key'])
+@app.route('/download')
+def download():
+    return render_template('download.html', key=stripe_keys['publishable_key'])
 
 @app.route('/charge', methods=['POST'])
 def charge():
