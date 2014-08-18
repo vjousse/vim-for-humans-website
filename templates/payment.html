@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<input type="number" name="amount" id="amount" min="0" step="any"/>
+<button id="customButton">C'est parti !</button>
+
+<script>
+  var handler = StripeCheckout.configure({
+    key: '{{ key }}',
+    token: function(token) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+      console.log(token);
+    }
+  });
+
+  document.getElementById('customButton').addEventListener('click', function(e) {
+    // Open Checkout with further options
+    var amount = parseFloat(document.getElementById('amount').value)*100;
+    console.log(amount);
+    handler.open({
+      name: 'Vimebook',
+      description: 'Vim pour les humains',
+      amount: amount,
+      currency: 'EUR',
+      allowRememberMe: false
+    });
+    e.preventDefault();
+  });
+</script>
+
+{% endblock %}
+
