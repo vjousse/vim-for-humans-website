@@ -53,7 +53,7 @@
                         un humain « normal ». Coloration syntaxique, explorateur de fichiers
                         (The NERD Tree), thème de couleurs (Solarized), utilisation de la
                         souris, … Nous abordons aussi pourquoi il sera important de se passer de
-                        la souris pour la santé de vos mains/doigts. Vous pouvez <a href="http://vimebook.com/wp-content/uploads/2013/09/vim-pour-les-humains-extrait-chap1.pdf">télécharger gratuitement le chapitre entier</a>.</p>
+                        la souris pour la santé de vos mains/doigts. Vous pouvez d'ailleurs directement <a href="{{ url_for('static', filename='vim-pour-les-humains-extrait-chap1.pdf') }}">télécharger le chapitre entier</a>.</p>
                         <h3>L’outil de manipulation de texte rêvé</h3>
                         <p>Une fois que vous pouvez utiliser Vim « normalement » grâce au
                         chapitre précédent, nous voyons ici comment en tirer pleinement partie.
@@ -68,12 +68,9 @@
                         <p>Nous finissons par fournir un ensemble de raccourcis claviers utiles
                         et/ou indispensables pour maitriser l’édition de texte au clavier.</p>
                         <h2>Télécharger un extrait du livre</h2>
-                        <p>Afin de mieux vous rendre compte de la teneur du livre, je vous propose de <strong><a href="http://vimebook.com/wp-content/uploads/2013/09/vim-pour-les-humains-extrait-chap1.pdf">télécharger le premier chapitre en entier</a></strong>.</p>
+                        <p>Afin de mieux vous rendre compte de la teneur du livre, je vous propose de <strong><a href="{{ url_for('static', filename='vim-pour-les-humains-extrait-chap1.pdf') }}">télécharger le premier chapitre en entier</a></strong>.</p>
                         <h2>Se procurer le livre</h2>
-                        <p>C’est bien beau tout ça, mais maintenant il va falloir passer à l’action ! Pour <strong>à peine le prix d’un DVD de qualité douteuse (9,99 euros)</strong>, vous ferez un investissement dans 60 pages de pur bonheur, et ce, pour le restant de votre vie. Le choix est vite fait non ? <img src="{{ url_for('static', filename='img/icon_wink.gif') }}" alt=";-)" class="wp-smiley">  </p>
-                        <p>Une fois redirigé sur Paypal, vous pourrez <strong><a href="https://payhip.com/s/paypal/KmTa">télécharger le livre «&nbsp;Vim pour les humains&nbsp;»</a></strong> directement et le recevoir de suite dans votre boîte email.</p>
-                        <p>Vous recevrez bien sûr <strong>toutes les mises à jour du livre gratuitement</strong> par la suite !</p>
-                        <p><a href="https://payhip.com/s/paypal/KmTa"><img src="{{ url_for('static', filename='img/cover.png') }}" alt="cover" class="aligncenter size-full wp-image-54" height="734" width="570"></a></p>
+                        <p>C’est bien beau tout ça, mais maintenant il va falloir passer à l’action ! Alors au boulot, <a href="{{ url_for('download') }}">téléchargez le livre !</a>                        <p><a href="{{ url_for('download') }}"><img src="{{ url_for('static', filename='img/cover.png') }}" alt="cover" class="aligncenter size-full wp-image-54" height="734" width="570"></a></p>
 
                 </div><!-- end #main_content -->
             </div><!-- end .span12 -->
@@ -81,7 +78,8 @@
         <div class="row">
             <div class="span12">
                 <div class="featured-bar">
-                    <p class="hero-p">Découvrez le moyen le plus rapide et le plus sûr d'apprendre Vim tout en restant productif.<br>Ce livre est <strong>payant, mais le <a href="http://ploum.net/le-prix-libre-une-impossible-utopie/">prix est libre</a></strong>. Il est diffusé sous licence libre <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="{{ url_for('static', filename='img/cc88x31.png' ) }}" /></a>.<br/><a href="{{ url_for('download') }}">Téléchargez l'ebook (PDF/epub/mobi) « Vim pour les humains »</a> !</p>
+                    <p class="hero-p">Découvrez le moyen le plus rapide et le plus sûr d'apprendre Vim tout en restant productif.<br>Ce livre est <strong>payant, mais le <a href="http://ploum.net/le-prix-libre-une-impossible-utopie/">prix est libre</a></strong>. Il est diffusé sous licence libre <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="{{ url_for('static', filename='img/cc88x31.png' ) }}" /></a> et 20% des gains sont redistribués à l'association de promotion du libre : <a href="http://www.framasoft.net/">Framasoft</a>.<br/><a href="{{ url_for('download') }}">Téléchargez l'ebook (PDF/epub/mobi) « Vim pour les humains »</a> !</p>
+
                 </div>
             </div>
         </div><!-- end .row -->
