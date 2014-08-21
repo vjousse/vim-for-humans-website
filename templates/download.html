@@ -42,9 +42,11 @@
             var handler = StripeCheckout.configure({
                 key: '{{ key }}',
                 token: function(token) {
-                // Use the token to create the charge with a server-side script.
-                // You can access the token ID with `token.id`
-                console.log(token);
+                    var request = new XMLHttpRequest();
+                    request.open('POST', '{{ url_for('charge') }}', true);
+                    request.setRequestHeader('Content-Type', 'application/json');
+                    request.send(JSON.stringify(token));
+
                 }
             });
 

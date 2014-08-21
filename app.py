@@ -21,6 +21,8 @@ def download():
 
 @app.route('/charge', methods=['POST'])
 def charge():
+    #{'id': 'tok_14TwY1KRgapzZVSgDU5fI3Io', 'livemode': False, 'email': 'vincent@jousse.org', 'card': {'id': 'card_14TwY1KRgapzZVSgD4JHoVDa', 'brand': 'Visa', 'address_zip': None, 'exp_month': 12, 'address_city': None, 'name': 'vincent@jousse.org', 'customer': None, 'country': 'US', 'address_state': None, 'fingerprint': 'KNmudQJYDGikF2dE', 'address_line2': None, 'last4': '4242', 'exp_year': 2023, 'address_line1': None, 'funding': 'credit', 'address_country': None, 'object': 'card'}, 'type': 'card', 'created': 1408631297, 'used': False, 'object': 'token'}
+
     # Amount in cents
     amount = 500
 
