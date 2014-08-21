@@ -1,5 +1,6 @@
 import os
 from flask import Flask, render_template, request
+from flask.ext.sqlalchemy import SQLAlchemy
 import stripe
 
 stripe_keys = {
@@ -10,6 +11,8 @@ stripe_keys = {
 stripe.api_key = stripe_keys['secret_key']
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///vimebook.db'
+db = SQLAlchemy(app)
 
 @app.route('/')
 def index():
@@ -42,6 +45,12 @@ def charge():
         )
 
     return render_template('charge.html', amount=amount)
+
+class Purchase(db.Model):
+    __tablename__ = 'purchase'
+    uuid = db.Column(db.String, primary_key=True)
+    email = db.Column(db.String)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
