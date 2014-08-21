@@ -32,21 +32,19 @@
             <h3>Contribuer en euros</h3>
             <script src="https://checkout.stripe.com/checkout.js"></script>
 
-            <form>
-            <input type="number" name="amount" id="amount" value="9.99" min="1" step="any" style="width: 40px" /> €
-            </form>
+            <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+            <input type="number" name="amount" id="amount" value="9.99" min="0" step="any" style="width: 40px" /> €
             20% des gains seront reversés à <a href="http://framasoft.net">Framasoft</a>.<br />
-            <button id="button-stripe">C'est parti !</button>
+            <input type="submit" id="button-stripe" value="C'est parti !" />
+            </form>
 
             <script>
             var handler = StripeCheckout.configure({
                 key: '{{ key }}',
                 token: function(token) {
-                    var request = new XMLHttpRequest();
-                    request.open('POST', '{{ url_for('charge') }}', true);
-                    request.setRequestHeader('Content-Type', 'application/json');
-                    request.send(JSON.stringify(token));
-
+                    var $input = $('<input type=hidden name=stripeToken />').val(token.id);
+                    var $inputEmail = $('<input type=hidden name=email />').val(token.email);
+                    $('#stripeform').append($input).append($inputEmail).submit();
                 }
             });
 

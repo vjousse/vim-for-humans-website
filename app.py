@@ -24,19 +24,22 @@ def charge():
     #{'id': 'tok_14TwY1KRgapzZVSgDU5fI3Io', 'livemode': False, 'email': 'vincent@jousse.org', 'card': {'id': 'card_14TwY1KRgapzZVSgD4JHoVDa', 'brand': 'Visa', 'address_zip': None, 'exp_month': 12, 'address_city': None, 'name': 'vincent@jousse.org', 'customer': None, 'country': 'US', 'address_state': None, 'fingerprint': 'KNmudQJYDGikF2dE', 'address_line2': None, 'last4': '4242', 'exp_year': 2023, 'address_line1': None, 'funding': 'credit', 'address_country': None, 'object': 'card'}, 'type': 'card', 'created': 1408631297, 'used': False, 'object': 'token'}
 
     # Amount in cents
-    amount = 500
+    amount = float(request.form['amount'])
+    amountInCents = int(amount)*100
+    print("Charging {}".format(amount))
 
-    customer = stripe.Customer.create(
-        email='customer@example.com',
-        card=request.form['stripeToken']
-    )
+    if(amount != 0.0):
+        customer = stripe.Customer.create(
+            email=request.form['email'],
+            card=request.form['stripeToken']
+        )
 
-    charge = stripe.Charge.create(
-        customer=customer.id,
-        amount=amount,
-        currency='usd',
-        description='Flask Charge'
-    )
+        charge = stripe.Charge.create(
+            customer=customer.id,
+            amount=amountInCents,
+            currency='eur',
+            description='Vim pour les humains'
+        )
 
     return render_template('charge.html', amount=amount)
 
