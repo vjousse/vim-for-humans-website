@@ -25,18 +25,22 @@
 
 <div class="row">
     <div class="span12">
-            <h2>Choisissez votre contribution</h2>
-    </div>
-    <div class="span6">
+
         <div id="payment-stripe">
-            <h3>Contribuer en euros</h3>
+        <div class="featured-bar">
+        <h2>Contribuez à votre tour</h2>
+            <h3>Fixez votre prix</h3>
             <script src="https://checkout.stripe.com/checkout.js"></script>
 
             <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
-            <input type="number" name="amount" id="amount" value="9.99" min="0" step="any" style="width: 40px" /> €
-            20% des gains seront reversés à <a href="http://framasoft.net">Framasoft</a>.<br />
-            <input type="submit" id="button-stripe" value="C'est parti !" />
+                <input type="number" name="amount" id="amount" value="9.99" min="0" step="any" style="width: 40px" /> <span>€</span>
+
+                <input type="submit" id="button-stripe" value="Contribuez et téléchargez" style="btn-orange"/>
+                <p>
+                <strong>20% des gains seront reversés à <a href="http://framasoft.net">Framasoft</a></strong>.</p>
+
             </form>
+        </div>
 
             <script>
             var handler = StripeCheckout.configure({
@@ -65,20 +69,21 @@
             });
             </script>
 
+            <p>
 
-        </div><!-- end #payment-stripe -->
-    </div><!-- end .span6 -->
+                Si vous ne pouvez pas contribuer en euros, fixez le prix à zéro et contribuez autrement :
+            </p>
 
-    <div class="span6">
-        <div id="payment-other">
-            <h3>Contribuer autrement</h3>
             <ul>
                 <li>Bitcoin: 1Ngx95Fk1YFPX5PhBwxPHXErrd5nPE9iFG</li>
                 <li><strong><a href="https://flattr.com/profile/vjousse">Flattr</a></strong> : <script id='fb17wor'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=vjousse&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb17wor');</script></li>
                  <li>Un petit merci par mail : <a href="mailto:vincent@jousse.org">vincent@jousse.org</a></li>
                  <li>Autre chose ?</li>
             </ul>
-            <button id="button-other">C'est parti !</button>
+
+
+
+
         </div><!-- end #payment-stripe -->
     </div><!-- end .span6 -->
 
