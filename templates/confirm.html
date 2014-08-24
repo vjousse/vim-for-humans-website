@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="span12">
+        <div id="main_content" role="main">
+            <h2 class="page-title">Merci !</h2>
+            <p>Votre contribution a bien été enregistrée et votre paiement de <strong>{{amount}} €</strong> validé. <br />Vous pouvez garder <a href="{{request.url}}">le lien de cette page</a> afin de re-télécharger le livre plus tard.<br />20% des gains seront reversés à l'association de promotion du libre <a href="http://www.framasoft.net/">Framasoft</a>.</p>.
+            <h2>Télécharger</h2>
+            <div>
+                <button class="btn btn-orange" type="button">Format PDF</button>
+                <button class="btn btn-light-blue" type="button">Format EPUB</button>
+                <button class="btn btn-green" type="button">Format MOBI</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
