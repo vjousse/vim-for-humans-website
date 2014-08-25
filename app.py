@@ -1,6 +1,7 @@
-import os
+import os, uuid
 from flask import Flask, render_template, request, url_for, redirect, send_from_directory
 from flask.ext.sqlalchemy import SQLAlchemy
+from datetime import datetime
 import stripe
 
 app = Flask(__name__, static_folder='static')
@@ -31,6 +32,10 @@ def download():
 def confirm(amount):
     return render_template('confirm.html', amount=amount/100)
 
+@app.route('/confirm/')
+def confirmfree():
+    return render_template('confirm-free.html')
+
 @app.route('/charge', methods=['POST'])
 def charge():
 
@@ -51,7 +56,22 @@ def charge():
             description='Vim pour les humains'
         )
 
-    return redirect(url_for('confirm', amount=amountInCents))
+        download = Download(
+                uuid=str(uuid.uuid4()),
+                email=request.form['email'],
+                price=amount)
+
+        db.session.add(download)
+        db.session.commit()
+        return redirect(url_for('confirm', amount=amountInCents))
+
+    else:
+
+        download = Download(uuid=str(uuid.uuid4()))
+        db.session.add(download)
+        db.session.commit()
+        return redirect(url_for('confirmfree'))
+
 
 class Download(db.Model):
     __tablename__ = 'download'
@@ -59,6 +79,10 @@ class Download(db.Model):
     email = db.Column(db.String)
     price = db.Column(db.Float, default=0)
     count = db.Column(db.Integer, default=0)
+    #: Timestamp for when this instance was created, in UTC
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    #: Timestamp for when this instance was last updated (via the app), in UTC
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
 
 
 if __name__ == '__main__':
