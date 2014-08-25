@@ -28,13 +28,26 @@ def index():
 def download():
     return render_template('download.html', key=stripe_keys['publishable_key'])
 
-@app.route('/confirm/<int:amount>')
-def confirm(amount):
-    return render_template('confirm.html', amount=amount/100)
+@app.route('/download/<download_uuid>/<name>.<format>')
+def downloadfile(download_uuid, name, format):
+    download = Download.query.get(download_uuid)
+    if format != 'pdf' and format != 'epub' and format != 'mobi':
+        format = 'pdf'
 
-@app.route('/confirm/')
-def confirmfree():
-    return render_template('confirm-free.html')
+    download.count += 1
+    db.session.commit()
+
+    return send_from_directory(os.path.join(app.static_folder, 'book'), 'vim-pour-les-humains.{}'.format(format))
+
+@app.route('/confirm/<download_uuid>')
+def confirm(download_uuid):
+    download = Download.query.get(download_uuid)
+    return render_template('confirm.html', amount=download.price, uuid=download_uuid)
+
+@app.route('/confirm-other/<download_uuid>')
+def confirmfree(download_uuid):
+    download = Download.query.get(download_uuid)
+    return render_template('confirm-free.html', uuid=download_uuid)
 
 @app.route('/charge', methods=['POST'])
 def charge():
@@ -42,6 +55,8 @@ def charge():
     # Amount in cents
     amount = float(request.form['amount'])
     amountInCents = int(amount*100)
+
+    download_uuid = str(uuid.uuid4())
 
     if(amount != 0.0):
         customer = stripe.Customer.create(
@@ -57,20 +72,20 @@ def charge():
         )
 
         download = Download(
-                uuid=str(uuid.uuid4()),
+                uuid=download_uuid,
                 email=request.form['email'],
                 price=amount)
 
         db.session.add(download)
         db.session.commit()
-        return redirect(url_for('confirm', amount=amountInCents))
+        return redirect(url_for('confirm', download_uuid=download_uuid))
 
     else:
 
-        download = Download(uuid=str(uuid.uuid4()))
+        download = Download(uuid=download_uuid)
         db.session.add(download)
         db.session.commit()
-        return redirect(url_for('confirmfree'))
+        return redirect(url_for('confirmfree', download_uuid=download_uuid))
 
 
 class Download(db.Model):
