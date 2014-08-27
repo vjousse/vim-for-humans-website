@@ -28,6 +28,5 @@ exec ./env/bin/gunicorn ${WSGI_MODULE}:application \
 --name $NAME \
 --workers $NUM_WORKERS \
 --user=$USER --group=$GROUP \
---bind=0.0.0.0:8000 \
---timeout=3600
-#--bind=unix:$SOCKFILE
+--timeout=3600 \
+--bind=unix:$SOCKFILE
