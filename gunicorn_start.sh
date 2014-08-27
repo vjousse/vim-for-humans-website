@@ -1,7 +1,7 @@
 #!/bin/bash
  
-export LANG='en_GB.UTF-8'
-export LC_ALL='en_GB.UTF-8'
+export LANG='fr_FR.utf8'
+export LC_ALL='fr_FR.utf8'
 
 NAME="vimebook" # Name of the application
 ROOTDIR=/home/vimebook/python/vim-for-humans-website
