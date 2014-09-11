@@ -29,18 +29,41 @@
         <div id="payment-stripe">
         <div class="featured-bar">
         <h2>Contribuez à votre tour</h2>
-            <h3>Fixez votre prix</h3>
-            <script src="https://checkout.stripe.com/checkout.js"></script>
+            <div class="row">
+                <div class="span6">
+                    <h3>Fixez votre prix</h3>
+                    <script src="https://checkout.stripe.com/checkout.js"></script>
 
-            <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
-                <input type="number" name="amount" id="amount" value="9.99" min="0" step="any" style="width: 40px" /> <span>€</span>
+                    <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                        <input type="number" name="amount" id="amount" value="9.99" min="0" step="any" style="width: 40px" /> <span>€</span>
 
-                <button type="submit" id="button-stripe" class="btn btn-orange"/>Contribuez et téléchargez</button>
-                <p>
-                <strong>20% des gains seront reversés à <a href="http://framasoft.net">Framasoft</a></strong>.</p>
-                <p>La plateforme de paiement utilisée est <a href="http://stripe.com"><strong>Stripe</strong></a>. Vous pouvez contribuer par <strong>Paypal</strong> si vous préférez, le compte est le suivant : contact@vimebook.com</p>
+                        <button type="submit" id="button-stripe" class="btn btn-orange"/>Contribuez et téléchargez</button>
+                        <p>
+                        <strong>20% des gains seront reversés à <a href="http://framasoft.net">Framasoft</a></strong>.</p>
+                        <p>La plateforme de paiement utilisée est <a href="http://stripe.com"><strong>Stripe</strong></a>. Vous pouvez contribuer par <strong>Paypal</strong> si vous préférez, le compte est le suivant : <strong>contact@vimebook.com</strong></p>
 
-            </form>
+                    </form>
+
+                </div>
+
+                <div class="span6">
+                    <h3>Paiments par CB/Stripe</h3>
+                    <ul>
+                        <li>Moyenne des dons : {{ average_donation }}</li>
+                        <li>Nombre de dons : {{ donation_number }}</li>
+                        <li>Nombre de téléchargements : {{ download_number }}</li>
+                        <li>Somme pour Framasoft : {{ framasoft_amount }}</li>
+                        <li>Répartition pour 10€ : <ul>
+                            <li>Impôts entreprise : 2,5€</li> 
+                            <li>Commission Stripe : 0,59€</li> 
+                            <li>Versement Framasoft : 2,00€</li> 
+                            <li>Reste : 4.91</li>
+                        </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
         </div>
 
             <script>
