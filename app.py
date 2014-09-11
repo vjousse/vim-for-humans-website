@@ -1,6 +1,7 @@
 import os, uuid
 from flask import Flask, render_template, request, url_for, redirect, send_from_directory
 from flask.ext.sqlalchemy import SQLAlchemy
+from sqlalchemy import func 
 from datetime import datetime
 from functools import reduce
 import stripe
@@ -34,6 +35,11 @@ def download():
     for donation in donations:
         total_donation += donation.price
 
+    result = db.session \
+            .query(func.max(Download.price).label("max"), func.min(Download.price).label("min")) \
+            .filter(Download.price > 0) \
+            .one()
+
     framasoft_amount = "{:.2f}".format(total_donation * 0.20)
     average_donation = total_donation / donation_number
     return render_template('download.html', \
@@ -41,7 +47,9 @@ def download():
             download_number = download_number, \
             donation_number = donation_number, \
             framasoft_amount = framasoft_amount, \
-            average_donation = "{:.2f}".format(average_donation))
+            average_donation = "{:.2f}".format(average_donation), \
+            max = result.max, \
+            min = result.min)
 
 @app.route('/download/<download_uuid>/<name>.<format>')
 def downloadfile(download_uuid, name, format):
