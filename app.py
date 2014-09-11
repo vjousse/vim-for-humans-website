@@ -30,7 +30,10 @@ def download():
     download_number = Download.query.count()
     donations = Download.query.filter(Download.price>0).all()
     donation_number = len(donations)
-    total_donation = (reduce(lambda x, y: x.price+y.price, donations))
+    total_donation = 0
+    for donation in donations:
+        total_donation += donation.price
+
     framasoft_amount = "{:.2f}".format(total_donation * 0.20)
     average_donation = total_donation / donation_number
     return render_template('download.html', \
