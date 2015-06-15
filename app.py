@@ -1,6 +1,7 @@
 import os, uuid
 from flask import Flask, render_template, request, url_for, redirect, send_from_directory
 from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.babel import Babel
 from sqlalchemy import func 
 from datetime import datetime
 from functools import reduce
@@ -9,6 +10,7 @@ import stripe
 app = Flask(__name__, static_folder='static')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///vimebook.db'
 db = SQLAlchemy(app)
+babel = Babel(app)
 
 stripe_keys = {
     'secret_key': os.environ['SECRET_KEY'],
