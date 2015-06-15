@@ -10,7 +10,7 @@ import stripe
 app = Flask(__name__, static_folder='static')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///vimebook.db'
 db = SQLAlchemy(app)
-babel = Babel(app)
+babel = Babel(app, default_locale='fr')
 
 stripe_keys = {
     'secret_key': os.environ['SECRET_KEY'],
