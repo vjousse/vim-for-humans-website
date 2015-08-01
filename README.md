@@ -13,9 +13,21 @@
     from app import db
     db.create_all()
 
-## Compile translations
+## Translations
 
-    pybabel compile -d translation
+### Extract strings to translate
+
+    pybabel extract -F babel.cfg -o messages.pot ./templates
+
+### Update messages.po
+
+    pybabel update -i messages.pot -d translations
+
+### Finally compile
+
+    pybabel compile -d translations
+
+
 
 ## Run
 
