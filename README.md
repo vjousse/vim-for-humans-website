@@ -15,7 +15,7 @@
 
 ## Compile translations
 
-    pybabel compile -d transaltion
+    pybabel compile -d translation
 
 ## Run
 
