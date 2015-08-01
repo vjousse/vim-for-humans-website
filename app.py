@@ -1,10 +1,11 @@
 import os, uuid
-from flask import Flask, render_template, request, url_for, redirect, send_from_directory
+from flask import Flask, render_template, request, url_for, redirect, send_from_directory, g
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.babel import Babel
 from sqlalchemy import func 
 from datetime import datetime
 from functools import reduce
+from config import LANGUAGES
 import stripe
 
 app = Flask(__name__, static_folder='static')
@@ -19,12 +20,30 @@ stripe_keys = {
 
 stripe.api_key = stripe_keys['secret_key']
 
+@babel.localeselector
+def get_locale():
+    """Direct babel to use the language defined in the session."""
+    return g.get('current_lang', 'fr')
+
+
+@app.before_request
+def before():
+    if request.view_args and 'lang_code' in request.view_args:
+        if request.view_args['lang_code'] not in LANGUAGES.keys():
+            return abort(404)
+        g.current_lang = request.view_args['lang_code']
+        request.view_args.pop('lang_code')
+
 @app.route('/robots.txt')
 @app.route('/sitemap.xml')
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
 
 @app.route('/')
+def root():
+    return redirect(url_for('index', lang_code='fr'))
+
+@app.route('/<lang_code>')
 def index():
     return render_template('index.html', key=stripe_keys['publishable_key'])
 
@@ -64,12 +83,12 @@ def downloadfile(download_uuid, name, format):
 
     return send_from_directory(os.path.join(app.static_folder, 'book'), 'vim-pour-les-humains.{}'.format(format))
 
-@app.route('/confirm/<download_uuid>')
+@app.route('/<lang_code>/confirm/<download_uuid>')
 def confirm(download_uuid):
     download = Download.query.get(download_uuid)
     return render_template('confirm.html', amount=download.price, uuid=download_uuid)
 
-@app.route('/confirm-other/<download_uuid>')
+@app.route('/<lang_code>/confirm-other/<download_uuid>')
 def confirmfree(download_uuid):
     download = Download.query.get(download_uuid)
     return render_template('confirm-free.html', uuid=download_uuid)
