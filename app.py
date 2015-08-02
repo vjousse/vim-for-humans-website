@@ -5,20 +5,15 @@ from flask.ext.babel import Babel
 from sqlalchemy import func 
 from datetime import datetime
 from functools import reduce
-from config import LANGUAGES
+from config import LANGUAGES, SQLALCHEMY_DATABASE_URI, STRIPE_KEYS
 import stripe
 
 app = Flask(__name__, static_folder='static')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///vimebook.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 db = SQLAlchemy(app)
 babel = Babel(app, default_locale='fr')
 
-stripe_keys = {
-    'secret_key': os.environ['SECRET_KEY'],
-    'publishable_key': os.environ['PUBLISHABLE_KEY']
-}
-
-stripe.api_key = stripe_keys['secret_key']
+stripe.api_key = STRIPE_KEYS['secret_key']
 
 @babel.localeselector
 def get_locale():
@@ -45,7 +40,7 @@ def root():
 
 @app.route('/<lang_code>')
 def index():
-    return render_template('index.html', key=stripe_keys['publishable_key'])
+    return render_template('index.html', key=STRIPE_KEYS['publishable_key'])
 
 @app.route('/download')
 def download():
@@ -64,7 +59,7 @@ def download():
     framasoft_amount = "{:.2f}".format(total_donation * 0.20)
     average_donation = total_donation / donation_number
     return render_template('download.html', \
-            key=stripe_keys['publishable_key'], \
+            key=STRIPE_KEYS['publishable_key'], \
             download_number = download_number, \
             donation_number = donation_number, \
             framasoft_amount = framasoft_amount, \
