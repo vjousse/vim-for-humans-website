@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-01 20:47+0200\n"
+"POT-Creation-Date: 2015-08-02 14:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.0\n"
 
-#: templates/layout.html:27
-msgid "Vim for humans"
+#: templates/layout.html:68
+msgid "Home"
 msgstr ""
 
-#: templates/layout.html:33
-msgid "Learn Vim"
+#: templates/layout.html:69
+msgid "Details"
+msgstr ""
+
+#: templates/layout.html:70
+msgid "FAQs"
+msgstr ""
+
+#: templates/layout.html:71
+msgid "Download"
 msgstr ""
 
