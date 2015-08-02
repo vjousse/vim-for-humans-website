@@ -1,5 +1,238 @@
 {% extends "layout.html" %}
 {% block content %}
+
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    <div id="section-home" class="heading-block title-center nobottomborder page-section">
+                        <h1>The best way to stay efficient while learning vim</h1>
+                        <span>Or how to overcome the <span class="color">famous</span> question<span><br /><span>"How do I quit this <span class="color">@#!?</span>"</span>
+                    </div>
+
+                    <div class="center bottommargin">
+                        <a href="#" data-scrollto="#section-download" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-download"></i>Download the ebook</a>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="col_one_third topmargin nobottommargin">
+
+                        <h3>Learn Vim the smart way.</h3>
+
+                        <p>I'm convinced that everybody should be able to learn Vim and that it's just a problem of documentation. With this ebook you will:</p>
+
+                        <div class="divider divider-short"><i class="icon-circle"></i></div>
+
+                        <ul class="iconlist iconlist-large iconlist-color">
+                            <li><i class="icon-ok-sign"></i> Stay productive while learning Vim</li>
+                            <li><i class="icon-ok-sign"></i> Get a modern customizable IDE</li>
+                            <li><i class="icon-ok-sign"></i> Learn why Vim seems so strange</li>
+                            <li><i class="icon-ok-sign"></i> Get a selection of the best Vim plugins</li>
+                            <li><i class="icon-ok-sign"></i> Have fun :-)</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col_two_third topmargin nobottommargin col_last">
+
+                        <img src="{{ url_for('static', filename='images/icons/macbook_vim.png') }}" alt="Macbook Vim Underlay" style="position: absolute; top: 0; left: 0; z-index: 0;">
+
+
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="divider divider-short divider-center"><i class="icon-circle"></i></div>
+
+                    <div id="section-features" class="heading-block title-center page-section">
+                        <h2>Features Overview</h2>
+                        <span>Here is what this ebook is about</span>
+                    </div>
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-plain">
+                            <div class="fbox-icon" data-animate="bounceIn">
+                                <a href="#"><img src="images/icons/features/responsive.png" alt="Responsive Layout"></a>
+                            </div>
+                            <h3>Good looking Vim</h3>
+                            <p>It's not because we are geeks that we should use awful color schemes. Or should we?</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-plain">
+                            <div class="fbox-icon" data-animate="bounceIn" data-delay="800">
+                                <a href="#"><img src="images/icons/features/tick.png" alt="Retina Graphics"></a>
+                            </div>
+                            <h3>Pugin selection</h3>
+                            <p>Using Vim without plugins doesn't make any sense. It's like using a Smartphone without any app.</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third col_last">
+                        <div class="feature-box fbox-plain">
+                            <div class="fbox-icon" data-animate="bounceIn" data-delay="1000">
+                                <a href="#"><img src="images/icons/features/flag.png" alt="Powerful Performance"></a>
+                            </div>
+                            <h3>Smooth learning curve</h3>
+                            <p>If you don't quit the first week, you'll be using it for the rest of your life. It's my challenge!</p>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-plain">
+                            <div class="fbox-icon" data-animate="bounceIn" data-delay="200">
+                                <a href="#"><img src="images/icons/features/retina.png" alt="Retina Graphics"></a>
+                            </div>
+                            <h3>Creative Commons</h3>
+                            <p>You are free to do whatever you want (well, almost, see the licence details <a href="http://creativecommons.org/licenses/by/4.0/">here</a>) with the ebook.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-plain">
+                            <div class="fbox-icon" data-animate="bounceIn" data-delay="200">
+                                <a href="#"><img src="images/icons/features/tools.png" alt="Retina Graphics"></a>
+                            </div>
+                            <h3>Free price</h3>
+                            <p>You're free to pay whatever you want. Money, <a href="https://flattr.com/profile/vjousse">Flattr</a>, email or a thank you are fine. More <a href="https://ploum.net/the-disruptive-free-price/">about free price here</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third col_last">
+                        <div class="feature-box fbox-plain">
+                            <div class="fbox-icon" data-animate="bounceIn" data-delay="400">
+                                <a href="#"><img src="images/icons/features/performance.png" alt="Powerful Performance"></a>
+                            </div>
+                            <h3>Open Source</h3>
+                            <p>The entire source code is available on my <a href="#">Github profile</a>. Be sure to check it out!</p>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="divider divider-short divider-center"><i class="icon-circle"></i></div>
+
+                    <div id="section-faqs" class="heading-block title-center page-section">
+                        <h2>Frequently Asked Questions</h2>
+                        <span>Because I know your are still curious about it</span>
+                    </div>
+
+                    <div class="col_half nobottommargin">
+
+                        <h4 id="faq-1"><strong>Q.</strong> Is it really free?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</p>
+
+                        <div class="line"></div>
+
+                        <h4 id="faq-2"><strong>Q.</strong> Can I get a preview of the content?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, placeat, architecto rem dolorem dignissimos repellat veritatis in et eos doloribus magnam aliquam ipsa alias assumenda officiis quasi sapiente suscipit veniam odio voluptatum. Enim at asperiores quod velit minima officia accusamus cumque eligendi consequuntur fuga? Maiores, quasi, voluptates, exercitationem fuga voluptatibus a repudiandae expedita omnis molestiae alias repellat perferendis dolores dolor.</p>
+
+
+                    </div>
+
+                    <div class="col_half nobottommargin col_last">
+
+                        <h4 id="faq-7"><strong>Q.</strong> Is it possible to get a printed version?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad odio ab quis architecto recusandae doloremque incidunt! Eius, quidem, pariatur necessitatibus commodi aliquid deleniti repudiandae accusantium tempora soluta vel nesciunt est quibusdam iure adipisci aspernatur maiores saepe ea eaque quo harum reprehenderit similique nemo voluptate ullam natus illum magnam alias nobis doloremque delectus ipsa dicta repellat maxime dignissimos eveniet quae debitis ratione assumenda tempore officiis fugiat dolor. Saepe iusto praesentium ullam aliquam impedit.</p>
+
+                        <div class="line"></div>
+
+                        <h4 id="faq-8"><strong>Q.</strong> Can I thank you and share the love?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nisi, laborum autem reprehenderit excepturi harum ipsum quod sit. Inventore et sunt nemo natus labore voluptate omnis reprehenderit culpa. Minus vitae molestiae totam ut a accusamus at fugiat nemo debitis delectus? </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, esse, dolore, animi sed aliquam est consequatur atque magnam sunt voluptas nostrum sint minus neque iste ut velit iure eius! Hic, laudantium, consequatur veniam magnam ullam eveniet sed minus rem deleniti!</p>
+
+
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="divider divider-short divider-center"><i class="icon-circle"></i></div>
+
+                    <div id="section-download" class="heading-block title-center page-section">
+                        <h2>Download</h2>
+                        <span>Still have Questions? Contact Us using the Form below</span>
+                    </div>
+
+
+
+                    <!-- Contact Info
+                    ============================================= -->
+                    <div class="col_full nobottommargin clearfix">
+
+                        <div class="col_one_fourth">
+                            <div class="feature-box fbox-center fbox-bg fbox-plain">
+                                <div class="fbox-icon">
+                                    <a href="#"><i class="icon-map-marker2"></i></a>
+                                </div>
+                                <h3>Our Headquarters<span class="subtitle">Melbourne, Australia</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="col_one_fourth">
+                            <div class="feature-box fbox-center fbox-bg fbox-plain">
+                                <div class="fbox-icon">
+                                    <a href="#"><i class="icon-phone3"></i></a>
+                                </div>
+                                <h3>Speak to Us<span class="subtitle">(123) 456 7890</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="col_one_fourth">
+                            <div class="feature-box fbox-center fbox-bg fbox-plain">
+                                <div class="fbox-icon">
+                                    <a href="#"><i class="icon-skype2"></i></a>
+                                </div>
+                                <h3>Make a Video Call<span class="subtitle">CanvasOnSkype</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="col_one_fourth col_last">
+                            <div class="feature-box fbox-center fbox-bg fbox-plain">
+                                <div class="fbox-icon">
+                                    <a href="#"><i class="icon-twitter2"></i></a>
+                                </div>
+                                <h3>Follow on Twitter<span class="subtitle">2.3M Followers</span></h3>
+                            </div>
+                        </div>
+
+                    </div><!-- Contact Info End -->
+
+                </div>
+
+                <div id="section-buy" class="section page-section footer-stick">
+
+                    <div class="container clearfix">
+
+                        <div class="heading-block title-center nobottomborder">
+                            <h2>Enough? Start Building!</h2>
+                            <span>Now that you have read all the Tid-Bits, so start with a plan</span>
+                        </div>
+
+                        <div class="center">
+
+                            <a href="#" data-animate="tada" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>Start your FREE Trial</a> - OR - <a href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Sign Up for a Subscription</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section><!-- #content end -->
+
+
+{# Old Content #}
+{#
         <div class="row">
             <div class="span12">
                 <div class="featured-bar">
@@ -82,5 +315,6 @@
                 </div>
             </div>
         </div><!-- end .row -->
+        #}
 
 {% endblock %}
