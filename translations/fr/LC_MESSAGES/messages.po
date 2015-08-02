@@ -77,33 +77,39 @@ msgstr "Voici ce dont vous allez bénéficier"
 
 #: templates/index.html:62
 msgid "Good looking Vim"
-msgstr ""
+msgstr "Vim sexy"
 
 #: templates/index.html:63
 msgid ""
 "It's not because we are geeks that we should use awful color schemes. Or "
 "should we?"
 msgstr ""
+"Ce n'est pas parce que l'on est geek qu'on doit avoir des couleurs "
+"affreuses. Ou alors si&nbsp;? "
 
 #: templates/index.html:72
 msgid "Pugin selection"
-msgstr ""
+msgstr "Sélection de plugins"
 
 #: templates/index.html:73
 msgid ""
 "Using Vim without plugins doesn't make any sense. It's like using a "
 "Smartphone without any app."
 msgstr ""
+"Utiliser Vim sans plugin n'a pas de sens. C'est comme utiliser un "
+"Smartphone sans application."
 
 #: templates/index.html:82
 msgid "Smooth learning curve"
-msgstr ""
+msgstr "Apprentissage en douceur"
 
 #: templates/index.html:83
 msgid ""
 "If you don't quit the first week, you'll be using it for the rest of your"
-" life. It's my challenge!"
+" life. It's my bet!"
 msgstr ""
+"Si vous n'abandonnez pas la première semaine, vous l'utiliserez pour le "
+" reste de votre vie. C'est le défi que je me suis donné !"
 
 #: templates/index.html:94
 msgid "Creative Commons"
@@ -115,10 +121,13 @@ msgid ""
 "details <a href=\"http://creativecommons.org/licenses/by/4.0/\">here</a>)"
 " with the ebook."
 msgstr ""
+"Vous êtes libre de faire ce que vous voulez (enfin presque, vous "
+"pouvez <a href=\"http://creativecommons.org/licenses/by/4.0/\">consulter "
+"les détails de la licence</a>) avec l'ebook."
 
 #: templates/index.html:105
 msgid "Free price"
-msgstr ""
+msgstr "Prix libre"
 
 #: templates/index.html:115
 msgid "Open Source"
