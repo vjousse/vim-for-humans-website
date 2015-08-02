@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-02 22:12+0200\n"
+"POT-Creation-Date: 2015-08-02 22:57+0200\n"
 "PO-Revision-Date: 2015-06-15 15:24+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -72,8 +72,8 @@ msgid "Content"
 msgstr "Contenu"
 
 #: templates/index.html:54
-msgid "Here is what this ebook is about"
-msgstr "Voici ce dont vous allez bénéficier"
+msgid "Yum yum"
+msgstr "Miam miam"
 
 #: templates/index.html:62
 msgid "Good looking Vim"
@@ -109,7 +109,7 @@ msgid ""
 " life. It's my bet!"
 msgstr ""
 "Si vous n'abandonnez pas la première semaine, vous l'utiliserez pour le "
-" reste de votre vie. C'est le défi que je me suis donné !"
+"reste de votre vie. C'est le défi que je me suis donné !"
 
 #: templates/index.html:94
 msgid "Creative Commons"
@@ -121,17 +121,40 @@ msgid ""
 "details <a href=\"http://creativecommons.org/licenses/by/4.0/\">here</a>)"
 " with the ebook."
 msgstr ""
-"Vous êtes libre de faire ce que vous voulez (enfin presque, vous "
-"pouvez <a href=\"http://creativecommons.org/licenses/by/4.0/\">consulter "
-"les détails de la licence</a>) avec l'ebook."
+"Vous êtes libre de faire ce que vous voulez (enfin presque, vous pouvez "
+"<a href=\"http://creativecommons.org/licenses/by/4.0/\">consulter les "
+"détails de la licence</a>) avec l'ebook."
 
 #: templates/index.html:105
 msgid "Free price"
 msgstr "Prix libre"
 
+#: templates/index.html:106
+msgid ""
+"You're free to pay whatever you want. Money, <a "
+"href=\"https://flattr.com/profile/vjousse\">Flattr</a>, email or a thank "
+"you are fine. More <a href=\"https://ploum.net/the-disruptive-free-"
+"price/\">about free price here</a>."
+msgstr ""
+"Vous êtes libre de payer le prix que vous voulez. De l' argent, un <a "
+"href=\"https://flattr.com/profile/vjousse\">Flattr</a>, un email ou un "
+"merci feront très bien l'affaire. <a href=\"http://ploum.net/le-prix-"
+"libre-une-impossible-utopie/\">Plus d'infos au sujet du prix libre "
+"ici.</a>"
+
 #: templates/index.html:115
 msgid "Open Source"
 msgstr ""
+
+#: templates/index.html:116
+msgid ""
+"The entire source code is available on my <a "
+"href=\"https://github.com/vjousse/vim-for-humans-book\">Github "
+"profile</a>. Be sure to check it out!"
+msgstr ""
+"Le code source complet du livre est disponible sur mon <a "
+"href=\"https://github.com/vjousse/vim-for-humans-book\">profil "
+"Github</a>. Allez y jeter un œil&nbsp;!"
 
 #: templates/index.html:125
 msgid "Frequently Asked Questions"
@@ -155,4 +178,10 @@ msgstr "Télécharger"
 
 #~ msgid "Details"
 #~ msgstr "Détails"
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "Here is what this ebook is about"
+#~ msgstr "Voici ce dont vous allez bénéficier"
 
