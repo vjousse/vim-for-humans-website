@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-02 22:57+0200\n"
+"POT-Creation-Date: 2015-08-02 23:33+0200\n"
 "PO-Revision-Date: 2015-06-15 15:24+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -156,9 +156,41 @@ msgstr ""
 "href=\"https://github.com/vjousse/vim-for-humans-book\">profil "
 "Github</a>. Allez y jeter un œil&nbsp;!"
 
-#: templates/index.html:125
+#: templates/index.html:123
+msgid "Introduction"
+msgstr ""
+
+#: templates/index.html:128
+msgid "Usable Vim"
+msgstr ""
+
+#: templates/index.html:133
+msgid "The text editor you've always dreamed of"
+msgstr ""
+
+#: templates/index.html:138
+msgid "Essential plugins"
+msgstr ""
+
+#: templates/index.html:143
+msgid "Cheatsheet & examples"
+msgstr ""
+
+#: templates/index.html:150
+msgid "Download the first chapter!"
+msgstr "Télécharger le premier chapitre !"
+
+#: templates/index.html:162
 msgid "Frequently Asked Questions"
-msgstr "Questions & Réponses"
+msgstr "Foire Aux Questions"
+
+#: templates/index.html:163
+msgid "Would this site be serious without a FAQ?"
+msgstr "Parce que tout site se respectant mérite sa FAQ"
+
+#: templates/index.html:198 templates/layout.html:71
+msgid "Download"
+msgstr "Télécharger"
 
 #: templates/layout.html:31
 msgid "Vim for humans | Free price ebook"
@@ -169,19 +201,6 @@ msgid "Home"
 msgstr "Accueil"
 
 #: templates/layout.html:70
-msgid "FAQs"
-msgstr "Q&R"
-
-#: templates/layout.html:71
-msgid "Download"
-msgstr "Télécharger"
-
-#~ msgid "Details"
-#~ msgstr "Détails"
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Here is what this ebook is about"
-#~ msgstr "Voici ce dont vous allez bénéficier"
+msgid "FAQ"
+msgstr ""
 

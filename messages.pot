@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-02 22:57+0200\n"
+"POT-Creation-Date: 2015-08-02 23:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -134,8 +134,40 @@ msgid ""
 "profile</a>. Be sure to check it out!"
 msgstr ""
 
-#: templates/index.html:125
+#: templates/index.html:123
+msgid "Introduction"
+msgstr ""
+
+#: templates/index.html:128
+msgid "Usable Vim"
+msgstr ""
+
+#: templates/index.html:133
+msgid "The text editor you've always dreamed of"
+msgstr ""
+
+#: templates/index.html:138
+msgid "Essential plugins"
+msgstr ""
+
+#: templates/index.html:143
+msgid "Cheatsheet & examples"
+msgstr ""
+
+#: templates/index.html:150
+msgid "Download the first chapter!"
+msgstr ""
+
+#: templates/index.html:162
 msgid "Frequently Asked Questions"
+msgstr ""
+
+#: templates/index.html:163
+msgid "Would this site be serious without a FAQ?"
+msgstr ""
+
+#: templates/index.html:198 templates/layout.html:71
+msgid "Download"
 msgstr ""
 
 #: templates/layout.html:31
@@ -147,10 +179,6 @@ msgid "Home"
 msgstr ""
 
 #: templates/layout.html:70
-msgid "FAQs"
-msgstr ""
-
-#: templates/layout.html:71
-msgid "Download"
+msgid "FAQ"
 msgstr ""
 
