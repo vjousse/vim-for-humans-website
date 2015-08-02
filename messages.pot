@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-02 14:58+0200\n"
+"POT-Creation-Date: 2015-08-02 22:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,12 +42,93 @@ msgid ""
 "just a problem of documentation. With this ebook you will:"
 msgstr ""
 
-#: templates/layout.html:68
-msgid "Home"
+#: templates/index.html:32
+msgid "Stay productive while learning Vim"
 msgstr ""
 
-#: templates/layout.html:69
-msgid "Details"
+#: templates/index.html:33
+msgid "Get a modern customizable IDE"
+msgstr ""
+
+#: templates/index.html:34
+msgid "Learn why Vim seems so strange"
+msgstr ""
+
+#: templates/index.html:35
+msgid "Get a selection of the best Vim plugins"
+msgstr ""
+
+#: templates/index.html:36
+msgid "Have fun :-)"
+msgstr ""
+
+#: templates/index.html:53 templates/layout.html:69
+msgid "Content"
+msgstr ""
+
+#: templates/index.html:54
+msgid "Here is what this ebook is about"
+msgstr ""
+
+#: templates/index.html:62
+msgid "Good looking Vim"
+msgstr ""
+
+#: templates/index.html:63
+msgid ""
+"It's not because we are geeks that we should use awful color schemes. Or "
+"should we?"
+msgstr ""
+
+#: templates/index.html:72
+msgid "Pugin selection"
+msgstr ""
+
+#: templates/index.html:73
+msgid ""
+"Using Vim without plugins doesn't make any sense. It's like using a "
+"Smartphone without any app."
+msgstr ""
+
+#: templates/index.html:82
+msgid "Smooth learning curve"
+msgstr ""
+
+#: templates/index.html:83
+msgid ""
+"If you don't quit the first week, you'll be using it for the rest of your"
+" life. It's my challenge!"
+msgstr ""
+
+#: templates/index.html:94
+msgid "Creative Commons"
+msgstr ""
+
+#: templates/index.html:95
+msgid ""
+"You are free to do whatever you want (well, almost, see the licence "
+"details <a href=\"http://creativecommons.org/licenses/by/4.0/\">here</a>)"
+" with the ebook."
+msgstr ""
+
+#: templates/index.html:105
+msgid "Free price"
+msgstr ""
+
+#: templates/index.html:115
+msgid "Open Source"
+msgstr ""
+
+#: templates/index.html:125
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: templates/layout.html:31
+msgid "Vim for humans | Free price ebook"
+msgstr ""
+
+#: templates/layout.html:68
+msgid "Home"
 msgstr ""
 
 #: templates/layout.html:70
