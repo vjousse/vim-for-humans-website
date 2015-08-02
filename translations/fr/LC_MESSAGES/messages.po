@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-02 14:42+0200\n"
+"POT-Creation-Date: 2015-08-02 14:58+0200\n"
 "PO-Revision-Date: 2015-06-15 15:24+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -16,6 +16,36 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.0\n"
+
+#: templates/index.html:13
+msgid "The best way to stay efficient while learning Vim"
+msgstr "La meilleure façon de rester productif en apprenant Vim"
+
+#: templates/index.html:14
+msgid ""
+"<span>Or how to overcome the <span class=\"color\">famous</span> "
+"question<span><br /><span>\"How do I quit this <span "
+"class=\"color\">@#!?</span>\"</span>"
+msgstr ""
+"<span>Ou comment répondre à la <span class=\"color\">fameuse</span> "
+"question<span><br /><span>\"Comment est-ce que je quitte cette <span "
+"class=\"color\">@#!?</span>\"</span>"
+
+#: templates/index.html:18
+msgid "Download the ebook"
+msgstr "Télécharger l'ebook"
+
+#: templates/index.html:25
+msgid "Learn Vim the smart way"
+msgstr "Apprenez Vim intelligemment"
+
+#: templates/index.html:27
+msgid ""
+"I'm convinced that everybody should be able to learn Vim and that it's "
+"just a problem of documentation. With this ebook you will:"
+msgstr ""
+"Je suis convaincu que tout le monde peut apprendre à utiliser Vim et qu'il "
+"manque juste une documentation efficace. Avec ce livre vous allez :"
 
 #: templates/layout.html:68
 msgid "Home"
@@ -32,4 +62,5 @@ msgstr "Q&R"
 #: templates/layout.html:71
 msgid "Download"
 msgstr "Télécharger"
+
 
