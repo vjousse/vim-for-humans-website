@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-03 14:49+0200\n"
+"POT-Creation-Date: 2015-08-03 15:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgid ""
 "class=\"color\">@#!?</span>\"</span>"
 msgstr ""
 
-#: templates/index.html:18
+#: templates/index.html:18 templates/index.html:161
 msgid "Download the ebook"
 msgstr ""
 
@@ -192,6 +192,10 @@ msgstr ""
 
 #: templates/index.html:161
 msgid "Download the first chapter!"
+msgstr ""
+
+#: templates/index.html:161
+msgid "OR"
 msgstr ""
 
 #: templates/index.html:173

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-03 14:49+0200\n"
+"POT-Creation-Date: 2015-08-03 15:31+0200\n"
 "PO-Revision-Date: 2015-06-15 15:24+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgstr ""
 "question<span><br /><span>\"Comment est-ce que je quitte cette <span "
 "class=\"color\">@#!?</span>\"</span>"
 
-#: templates/index.html:18
+#: templates/index.html:18 templates/index.html:161
 msgid "Download the ebook"
 msgstr "Télécharger l'ebook"
 
@@ -180,12 +180,12 @@ msgid ""
 "important to abandon the mouse for the health of your hands / fingers. "
 "You can also directly <a href=\"#\">download the entire chapter</a>."
 msgstr ""
-"Nous voyons ici comment configurer Vim pour qu’il soit utilisable par "
-"un humain « normal ». Coloration syntaxique, explorateur de fichiers "
-"(The NERD Tree), thème de couleurs (Solarized), utilisation de la souris"
-", … Nous abordons aussi pourquoi il sera important de se passer de la "
-"souris pour la santé de vos mains/doigts. Vous pouvez d'ailleurs "
-"directement <a href=\"#\">télécharger le chapitre entier</a>."
+"Nous voyons ici comment configurer Vim pour qu’il soit utilisable par un "
+"humain « normal ». Coloration syntaxique, explorateur de fichiers (The "
+"NERD Tree), thème de couleurs (Solarized), utilisation de la souris, … "
+"Nous abordons aussi pourquoi il sera important de se passer de la souris "
+"pour la santé de vos mains/doigts. Vous pouvez d'ailleurs directement <a "
+"href=\"#\">télécharger le chapitre entier</a>."
 
 #: templates/index.html:138
 msgid "The text editor you've always dreamed of"
@@ -200,8 +200,8 @@ msgid ""
 msgstr ""
 "Une fois que vous pouvez utiliser Vim « normalement » grâce au chapitre "
 "précédent, nous voyons ici comment en tirer pleinement partie. Nous "
-"introduisons les raccourcis claviers ainsi que les modes. Nous commençons "
-"petit à petit par nous passer de la souris."
+"introduisons les raccourcis claviers ainsi que les modes. Nous commençons"
+" petit à petit par nous passer de la souris."
 
 #: templates/index.html:145
 msgid "Essential plugins"
@@ -215,8 +215,8 @@ msgid ""
 msgstr ""
 "Dans ce chapitre, nous faisons passer Vim au niveau supérieur. Nous lui "
 "ajoutons des plugins tels que Lusty Explorer (explorateur de fichiers au "
-"clavier), Ack (recherche dans les fichiers) ou encore Ctrl-p (recherche / "
-"ouverture rapide de fichiers)."
+"clavier), Ack (recherche dans les fichiers) ou encore Ctrl-p (recherche /"
+" ouverture rapide de fichiers)."
 
 #: templates/index.html:152
 msgid "Cheatsheet & examples"
@@ -227,12 +227,16 @@ msgid ""
 "We finally provide a set of useful/essential shortcuts to master keyboard"
 " text editing."
 msgstr ""
-"Nous finissons par fournir un ensemble de raccourcis claviers utiles et/ou "
-"indispensables pour maitriser l’édition de texte au clavier."
+"Nous finissons par fournir un ensemble de raccourcis claviers utiles "
+"et/ou indispensables pour maitriser l’édition de texte au clavier."
 
 #: templates/index.html:161
 msgid "Download the first chapter!"
 msgstr "Télécharger le premier chapitre !"
+
+#: templates/index.html:161
+msgid "OR"
+msgstr "OU"
 
 #: templates/index.html:173
 msgid "Frequently Asked Questions"
