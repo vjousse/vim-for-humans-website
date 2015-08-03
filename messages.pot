@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-02 23:33+0200\n"
+"POT-Creation-Date: 2015-08-03 14:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -138,35 +138,71 @@ msgstr ""
 msgid "Introduction"
 msgstr ""
 
-#: templates/index.html:128
+#: templates/index.html:126
+msgid ""
+"A brief overview of the advantages of vim and why it is one of the best "
+"investments you can make in your career."
+msgstr ""
+
+#: templates/index.html:130
 msgid "Usable Vim"
 msgstr ""
 
 #: templates/index.html:133
-msgid "The text editor you've always dreamed of"
+msgid ""
+"In this chapter we see how to configure Vim to make it usable by a "
+"\"normal\" human. Syntax highlighting, file explorer (The NERD Tree), "
+"color scheme (Solarized), using the mouse ... We also discuss why it is "
+"important to abandon the mouse for the health of your hands / fingers. "
+"You can also directly <a href=\"#\">download the entire chapter</a>."
 msgstr ""
 
 #: templates/index.html:138
+msgid "The text editor you've always dreamed of"
+msgstr ""
+
+#: templates/index.html:141
+msgid ""
+"Once you will be able to use Vim \"normally\" thanks to the previous "
+"chapter, we will see here how to take full advantage of Vim. We introduce"
+" keyboard shortcuts as well as modes. We begin by gradually to do without"
+" the mouse."
+msgstr ""
+
+#: templates/index.html:145
 msgid "Essential plugins"
 msgstr ""
 
-#: templates/index.html:143
+#: templates/index.html:148
+msgid ""
+"In this chapter, we put Vim to the next level. We add plugins such as "
+"Lusty Explorer (file explorer using the keyboard), Ack (file search) or "
+"Ctrl-p (fast searching/opening of files)."
+msgstr ""
+
+#: templates/index.html:152
 msgid "Cheatsheet & examples"
 msgstr ""
 
-#: templates/index.html:150
+#: templates/index.html:155
+msgid ""
+"We finally provide a set of useful/essential shortcuts to master keyboard"
+" text editing."
+msgstr ""
+
+#: templates/index.html:161
 msgid "Download the first chapter!"
 msgstr ""
 
-#: templates/index.html:162
+#: templates/index.html:173
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: templates/index.html:163
+#: templates/index.html:174
 msgid "Would this site be serious without a FAQ?"
 msgstr ""
 
-#: templates/index.html:198 templates/layout.html:71
+#: templates/index.html:209 templates/layout.html:71
 msgid "Download"
 msgstr ""
 
