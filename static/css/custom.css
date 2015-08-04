@@ -1,0 +1,13 @@
+input[type="radio"][name="payment"] {
+    display:none;
+}
+input[type="radio"][name="payment"]:checked + label i {
+    color: #C02942;
+}
+
+
+input[type="radio"][name="payment"]:checked + label div.feature-box {
+    border-bottom-color: black;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+}

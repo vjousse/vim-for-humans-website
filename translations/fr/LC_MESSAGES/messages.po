@@ -312,8 +312,8 @@ msgid "The ebook is published under the CC licence"
 msgstr "Cet ebook est publié sous une licence CC"
 
 #: templates/index.html:201
-msgid "So you can share it as you want"
-msgstr "Donc vous pouvez le partager sans soucis"
+msgid "So you can share it as you want!"
+msgstr "Donc vous pouvez le partager sans soucis !"
 
 #: templates/index.html:211 templates/layout.html:71
 msgid "Download"

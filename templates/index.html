@@ -163,8 +163,6 @@
                     </div>
 
 
-                    <div class="line"></div>
-
                     <div class="clear"></div>
 
                     <div class="divider divider-short divider-center"><i class="icon-circle"></i></div>
@@ -198,63 +196,12 @@
 
                         <h4 id="faq-8"><strong>Q.</strong> {{ _("Can I thank you and share the love?") }}</h4>
                         <p>{{ _("The ebook is published under the CC licence") }} <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="{{ url_for('static', filename='images/cc88x31.png' ) }}" /></a>.</p>
-                        <p>{{ _("So you can share it as you want") }}!</p>
+                        <p>{{ _("So you can share it as you want!") }}</p>
 
 
                     </div>
 
                     <div class="clear"></div>
-
-                    <div class="divider divider-short divider-center"><i class="icon-circle"></i></div>
-
-                    <div id="section-download" class="heading-block title-center page-section">
-                        <h2>{{ _('Download') }}</h2>
-                        <span>{{ _('Here we are!') }}</span>
-                    </div>
-
-
-
-                    <!-- Contact Info
-                    ============================================= -->
-                    <div class="col_full nobottommargin clearfix">
-
-                        <div class="col_one_fourth">
-                            <div class="feature-box fbox-center fbox-bg fbox-plain">
-                                <div class="fbox-icon">
-                                    <a href="#"><i class="icon-map-marker2"></i></a>
-                                </div>
-                                <h3>Our Headquarters<span class="subtitle">Melbourne, Australia</span></h3>
-                            </div>
-                        </div>
-
-                        <div class="col_one_fourth">
-                            <div class="feature-box fbox-center fbox-bg fbox-plain">
-                                <div class="fbox-icon">
-                                    <a href="#"><i class="icon-phone3"></i></a>
-                                </div>
-                                <h3>Speak to Us<span class="subtitle">(123) 456 7890</span></h3>
-                            </div>
-                        </div>
-
-                        <div class="col_one_fourth">
-                            <div class="feature-box fbox-center fbox-bg fbox-plain">
-                                <div class="fbox-icon">
-                                    <a href="#"><i class="icon-skype2"></i></a>
-                                </div>
-                                <h3>Make a Video Call<span class="subtitle">CanvasOnSkype</span></h3>
-                            </div>
-                        </div>
-
-                        <div class="col_one_fourth col_last">
-                            <div class="feature-box fbox-center fbox-bg fbox-plain">
-                                <div class="fbox-icon">
-                                    <a href="#"><i class="icon-twitter2"></i></a>
-                                </div>
-                                <h3>Follow on Twitter<span class="subtitle">2.3M Followers</span></h3>
-                            </div>
-                        </div>
-
-                    </div><!-- Contact Info End -->
 
                 </div>
 
@@ -262,16 +209,80 @@
 
                     <div class="container clearfix">
 
-                        <div class="heading-block title-center nobottomborder">
-                            <h2>Enough? Start Building!</h2>
-                            <span>Now that you have read all the Tid-Bits, so start with a plan</span>
+
+                        <div id="section-download" class="heading-block title-center page-section">
+                            <h2>{{ _('Download') }}</h2>
+                            <span>{{ _('Here we are! Well, almost.') }}</span>
                         </div>
+
+                        <h3>1 - Choose the way you want to pay</h3>
+
+
+
+                        <!-- Contact Info
+                        ============================================= -->
+                        <div class="col_full nobottommargin clearfix">
+
+                            <input type="radio" id="p-euros" name="payment" />
+                            <label for="p-euros" style="display: inherit; margin-bottom:0px;">
+                                <div class="col_one_fourth">
+                                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                                        <div class="fbox-icon" style="background-color: transparent;">
+                                            <i class="icon-euro"></i>
+                                        </div>
+                                        <h3>Euros<span class="subtitle">Starting from 0€</span></h3>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <input type="radio" id="p-flattr" name="payment" />
+                            <label for="p-flattr" style="display: inherit; margin-bottom:0px;">
+                                <div class="col_one_fourth">
+                                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                                        <div class="fbox-icon" style="background-color: transparent;">
+                                            <a href="#"><i class="icon-flattr"></i></a>
+                                        </div>
+                                        <h3>Flattr<span class="subtitle">Flattr my page</span></h3>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <input type="radio" id="p-bitcoin" name="payment" />
+                            <label for="p-bitcoin" style="display: inherit; margin-bottom:0px;">
+                                <div class="col_one_fourth">
+                                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                                        <div class="fbox-icon" style="background-color: transparent;">
+                                            <a href="#"><i class="icon-bitcoin2"></i></a>
+                                        </div>
+                                        <h3>Bitcoins<span class="subtitle">Hype!</span></h3>
+                                    </div>
+                                </div>
+
+                            </label>
+
+                            <input type="radio" id="p-mail" name="payment" />
+                            <label for="p-mail" style="display: inherit; margin-bottom:0px;">
+                                <div class="col_one_fourth col_last">
+                                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                                        <div class="fbox-icon" style="background-color: transparent;">
+                                            <a href="#"><i class="icon-heart3"></i></a>
+                                        </div>
+                                        <h3>Send a message<span class="subtitle">Share some love</span></h3>
+                                    </div>
+                                </div>
+                            </label>
+
+                        </div><!-- Contact Info End -->
+
+                        <h3>2 - Make the payment</h3>
+
+
+                        <h3>3 - Get your ebook</h3>
 
                         <div class="center">
-
-                            <a href="#" data-animate="tada" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>Start your FREE Trial</a> - OR - <a href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Sign Up for a Subscription</a>
-
+                            <a href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin disabled"><i class="icon-user2"></i>Contribute and download</a>
                         </div>
+
 
                     </div>
 
