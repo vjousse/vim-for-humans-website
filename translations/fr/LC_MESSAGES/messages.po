@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-03 15:31+0200\n"
+"POT-Creation-Date: 2015-08-04 10:30+0200\n"
 "PO-Revision-Date: 2015-06-15 15:24+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -246,9 +246,82 @@ msgstr "Foire Aux Questions"
 msgid "Would this site be serious without a FAQ?"
 msgstr "Parce que tout site se respectant mérite sa FAQ"
 
-#: templates/index.html:209 templates/layout.html:71
+#: templates/index.html:179
+msgid "Is it really free?"
+msgstr "Est-ce que c'est vraiment gratuit ?"
+
+#: templates/index.html:180
+msgid ""
+"Free price doesn't mean that it's free. I firmly believe that everybody "
+"has something to give in exchange of this ebook. The difference is just "
+"that I let you fix the price. It can be whatever you want: bitcoins, "
+"money, <a href=\"https://flattr.com/profile/vjousse\">Flattr</a>, email "
+"or a thank you are fine. More <a href=\"https://ploum.net/the-disruptive-"
+"free-price/\">about free price here</a>."
+msgstr ""
+"Prix libre ne veux pas dire que c'est gratuit. Je suis convaincu que "
+"chaque personne a quelque chose à apporter en échange de cet ebook. "
+"Je vous laisse donc choisir quoi. Vous êtes libre de payer le prix "
+"que vous voulez. De l' argent, des bitcoins, un <a "
+"href=\"https://flattr.com/profile/vjousse\">Flattr</a>, un email ou un "
+"merci feront très bien l'affaire. <a href=\"http://ploum.net/le-prix-"
+"libre-une-impossible-utopie/\">Plus d'infos au sujet du prix libre "
+"ici.</a>"
+
+#: templates/index.html:184
+msgid "Can I get a preview of the content?"
+msgstr "Est-ce que je peux avoir un aperçu du contenu ?"
+
+#: templates/index.html:185
+msgid "Sure, you can even"
+msgstr "Bien sûr, vous pouvez même "
+
+#: templates/index.html:185
+msgid "download the first chapter"
+msgstr "télécharger le premier chapitre !"
+
+#: templates/index.html:192
+msgid "Is this ebook suited for Vim experts?"
+msgstr "Est-ce que cet ebook est adapté pour les experts de Vim ?"
+
+#: templates/index.html:194
+msgid ""
+"Clearly not. This book is for Vim novices wishing not to quit after two "
+"days. The goal is to help you take the first step without loosing all "
+"your productivity. Lot of ressources are available for gurus like: <a "
+"href=\"http://www.swaroopch.com/notes/vim/\">A byte of vim</a>, <a "
+"href=\"http://www.vimbits.com/\">Vimbits</a>, <a "
+"href=\"http://www.amazon.fr/gp/product/059652983X/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=059652983X&linkCode=as2\">Learning"
+" The Vi and Vim Editors</a> and <a "
+"href=\"http://www.amazon.fr/gp/product/1934356980/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=1934356980&linkCode=as2\">Practical"
+" Vim</a>."
+msgstr ""
+"Clairement pas. Ce livre s'adresse aux novices de Vim désirant bénéficier "
+"d'un moyen pour ne pas l’abandonner au bout de deux jours. Le but est de "
+"vous mettre le pied à l'étrier et de vous permettre de franchir la "
+"première marche sans perdre toute votre productivité. Libre à vous ensuite "
+"d'utiliser toutes les ressources disponibles sur internet pour maitriser "
+"les subtilités les plus obscures de Vim."
+
+#: templates/index.html:199
+msgid "Can I thank you and share the love?"
+msgstr "Est-ce que je peux vous remercier et faire tourner ?"
+
+#: templates/index.html:200
+msgid "The ebook is published under the CC licence"
+msgstr "Cet ebook est publié sous une licence CC"
+
+#: templates/index.html:201
+msgid "So you can share it as you want"
+msgstr "Donc vous pouvez le partager sans soucis"
+
+#: templates/index.html:211 templates/layout.html:71
 msgid "Download"
 msgstr "Télécharger"
+
+#: templates/index.html:212
+msgid "Here we are!"
+msgstr "Nous y voilà enfin!"
 
 #: templates/layout.html:31
 msgid "Vim for humans | Free price ebook"

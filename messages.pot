@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-03 15:31+0200\n"
+"POT-Creation-Date: 2015-08-04 10:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -206,8 +206,67 @@ msgstr ""
 msgid "Would this site be serious without a FAQ?"
 msgstr ""
 
-#: templates/index.html:209 templates/layout.html:71
+#: templates/index.html:179
+msgid "Is it really free?"
+msgstr ""
+
+#: templates/index.html:180
+msgid ""
+"Free price doesn't mean that it's free. I firmly believe that everybody "
+"has something to give in exchange of this ebook. The difference is just "
+"that I let you fix the price. It can be whatever you want: bitcoins, "
+"money, <a href=\"https://flattr.com/profile/vjousse\">Flattr</a>, email "
+"or a thank you are fine. More <a href=\"https://ploum.net/the-disruptive-"
+"free-price/\">about free price here</a>."
+msgstr ""
+
+#: templates/index.html:184
+msgid "Can I get a preview of the content?"
+msgstr ""
+
+#: templates/index.html:185
+msgid "Sure, you can even"
+msgstr ""
+
+#: templates/index.html:185
+msgid "download the first chapter"
+msgstr ""
+
+#: templates/index.html:192
+msgid "Is this ebook suited for Vim experts?"
+msgstr ""
+
+#: templates/index.html:194
+msgid ""
+"Clearly not. This book is for Vim novices wishing not to quit after two "
+"days. The goal is to help you take the first step without loosing all "
+"your productivity. Lot of ressources are available for gurus like: <a "
+"href=\"http://www.swaroopch.com/notes/vim/\">A byte of vim</a>, <a "
+"href=\"http://www.vimbits.com/\">Vimbits</a>, <a "
+"href=\"http://www.amazon.fr/gp/product/059652983X/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=059652983X&linkCode=as2\">Learning"
+" The Vi and Vim Editors</a> and <a "
+"href=\"http://www.amazon.fr/gp/product/1934356980/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=1934356980&linkCode=as2\">Practical"
+" Vim</a>."
+msgstr ""
+
+#: templates/index.html:199
+msgid "Can I thank you and share the love?"
+msgstr ""
+
+#: templates/index.html:200
+msgid "The ebook is published under the CC licence"
+msgstr ""
+
+#: templates/index.html:201
+msgid "So you can share it as you want"
+msgstr ""
+
+#: templates/index.html:211 templates/layout.html:71
 msgid "Download"
+msgstr ""
+
+#: templates/index.html:212
+msgid "Here we are!"
 msgstr ""
 
 #: templates/layout.html:31

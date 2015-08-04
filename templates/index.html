@@ -158,7 +158,7 @@
 
                     <div class="center">
 
-                        <a href="#" data-animate="tada" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>{{ _('Download the first chapter!') }}</a> - {{ _('OR') }} - <a href="#" data-scrollto="#section-download" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>{{ _('Download the ebook') }}</a>
+                        <a href="{{ url_for('static', filename='vim-pour-les-humains-extrait-chap1.pdf') }}" data-animate="tada" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>{{ _('Download the first chapter!') }}</a> - {{ _('OR') }} - <a href="#" data-scrollto="#section-download" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>{{ _('Download the ebook') }}</a>
 
                     </div>
 
@@ -176,29 +176,29 @@
 
                     <div class="col_half nobottommargin">
 
-                        <h4 id="faq-1"><strong>Q.</strong> Is it really free?</h4>
-                        <p>Free price doesn't mean that it's free. I firmly believe that everybody has something to give in exchange of this ebook. The difference is just that I let you fix the price. It can be whatever you want: bitcoins, money, <a href=\"https://flattr.com/profile/vjousse\">Flattr</a>, email or a thank you are fine. More <a href=\"https://ploum.net/the-disruptive-free-price/\">about free price here</a>.</p>
+                        <h4 id="faq-1"><strong>Q.</strong> {{ _('Is it really free?') }}</h4>
+                        <p>{{ _("Free price doesn't mean that it's free. I firmly believe that everybody has something to give in exchange of this ebook. The difference is just that I let you fix the price. It can be whatever you want: bitcoins, money, <a href=\"https://flattr.com/profile/vjousse\">Flattr</a>, email or a thank you are fine. More <a href=\"https://ploum.net/the-disruptive-free-price/\">about free price here</a>.") }}</p>
 
                         <div class="line"></div>
 
-                        <h4 id="faq-2"><strong>Q.</strong> Can I get a preview of the content?</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, placeat, architecto rem dolorem dignissimos repellat veritatis in et eos doloribus magnam aliquam ipsa alias assumenda officiis quasi sapiente suscipit veniam odio voluptatum. Enim at asperiores quod velit minima officia accusamus cumque eligendi consequuntur fuga? Maiores, quasi, voluptates, exercitationem fuga voluptatibus a repudiandae expedita omnis molestiae alias repellat perferendis dolores dolor.</p>
+                        <h4 id="faq-2"><strong>Q.</strong> {{ _('Can I get a preview of the content?') }}</h4>
+                        <p>{{ _('Sure, you can even') }} <a href=\"{{ url_for('static', filename='vim-pour-les-humains-extrait-chap1.pdf') }}\">{{ _('download the first chapter') }}</a>! </p>
 
 
                     </div>
 
                     <div class="col_half nobottommargin col_last">
 
-                        <h4 id="faq-7"><strong>Q.</strong> Is this ebook suited for Vim experts?</h4>
+                        <h4 id="faq-7"><strong>Q.</strong> {{ _('Is this ebook suited for Vim experts?') }}</h4>
                         <p>
-                        Clearly not. This book is for Vim novices wishing not to quit after two days. The goal is to help you take the first step without loosing all your productivity. Lot of ressources are available for gurus like: <a href="http://www.swaroopch.com/notes/vim/">A byte of vim</a>, <a href="http://www.vimbits.com/">Vimbits</a>, <a href="http://www.amazon.fr/gp/product/059652983X/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=059652983X&linkCode=as2">Learning The Vi and Vim Editors</a> and <a href="http://www.amazon.fr/gp/product/1934356980/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=1934356980&linkCode=as2">Practical Vim</a>.
+                        {{ _("Clearly not. This book is for Vim novices wishing not to quit after two days. The goal is to help you take the first step without loosing all your productivity. Lot of ressources are available for gurus like: <a href=\"http://www.swaroopch.com/notes/vim/\">A byte of vim</a>, <a href=\"http://www.vimbits.com/\">Vimbits</a>, <a href=\"http://www.amazon.fr/gp/product/059652983X/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=059652983X&linkCode=as2\">Learning The Vi and Vim Editors</a> and <a href=\"http://www.amazon.fr/gp/product/1934356980/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=1934356980&linkCode=as2\">Practical Vim</a>.") }}
                         </p>
 
                         <div class="line"></div>
 
-                        <h4 id="faq-8"><strong>Q.</strong> Can I thank you and share the love?</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nisi, laborum autem reprehenderit excepturi harum ipsum quod sit. Inventore et sunt nemo natus labore voluptate omnis reprehenderit culpa. Minus vitae molestiae totam ut a accusamus at fugiat nemo debitis delectus? </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, esse, dolore, animi sed aliquam est consequatur atque magnam sunt voluptas nostrum sint minus neque iste ut velit iure eius! Hic, laudantium, consequatur veniam magnam ullam eveniet sed minus rem deleniti!</p>
+                        <h4 id="faq-8"><strong>Q.</strong> {{ _("Can I thank you and share the love?") }}</h4>
+                        <p>{{ _("The ebook is published under the CC licence") }} <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="{{ url_for('static', filename='images/cc88x31.png' ) }}" /></a>.</p>
+                        <p>{{ _("So you can share it as you want") }}!</p>
 
 
                     </div>
@@ -209,7 +209,7 @@
 
                     <div id="section-download" class="heading-block title-center page-section">
                         <h2>{{ _('Download') }}</h2>
-                        <span>Still have Questions? Contact Us using the Form below</span>
+                        <span>{{ _('Here we are!') }}</span>
                     </div>
 
 
