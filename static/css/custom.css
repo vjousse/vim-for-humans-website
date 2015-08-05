@@ -25,3 +25,7 @@ input[id="p-mail"]:checked ~ #payment-mail
     display: none;
     padding-bottom: 20px;
 }
+
+.payment-method > p {
+    height: 30px;
+}
