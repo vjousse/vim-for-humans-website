@@ -291,12 +291,19 @@
                             <script src="https://checkout.stripe.com/checkout.js"></script>
 
                                 <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
-                                    <input type="number" name="amount" id="amount" value="9.99" min="0" step="any" style="width: 40px" /> <span>€</span>
 
-                                    <button type="submit" id="button-stripe" class="btn btn-orange"/>Contribuez et téléchargez</button>
-                                    <p>
-                                    <strong>20% des gains seront reversés à <a href="http://framasoft.net">Framasoft</a></strong>.</p>
-                                    <p>La plateforme de paiement utilisée est <a href="http://stripe.com"><strong>Stripe</strong></a>. Vous pouvez contribuer par <strong>Paypal</strong> si vous préférez, le compte est le suivant : <strong>contact@vimebook.com</strong></p>
+                                    <div class="col-md-2 col-xs-3 nopadding">
+                                        <input class="sm-form-control" type="number" name="amount" id="amount" value="9.99" min="0" step="any" placeholder="Amount in €"/>
+                                    </div>
+                                    <div class="col-md-10 col-xs-9">
+                                        <span style="padding-right: 20px">€</span>
+                                        <button type="submit" id="button-stripe" class="button button-3d button-red nomargin"/>Contribute and download</button>
+                                    </div>
+
+                                    <div class="clear"></div>
+
+                                    <p style="padding-top: 30px"><strong>20% des gains seront reversés à <a href="http://framasoft.net">Framasoft</a></strong>.<br />
+                                    La plateforme de paiement utilisée est <a href="http://stripe.com"><strong>Stripe</strong></a>. Vous pouvez contribuer par <strong>Paypal</strong> si vous préférez, le compte est le suivant : <strong>contact@vimebook.com</strong></p>
 
                                 </form>
 
@@ -333,25 +340,33 @@
                                 <p>
                                     <strong>Paypal account:</strong> contact@vimebook.com
                                 </p>
+                                <button href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Download</button>
                             </div>
 
                             <div id="payment-flattr" class="payment-method">
-                                <a class="FlattrButton" style="display:none;" href="http://vimebook.com/download"></a>
+                                <p>
+                                    <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://vimebook.com/download"></a>
+                                </p>
+                                <div>
+                                    <button href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Download</button>
+                                </div>
                             </div>
 
                             <div id="payment-bitcoins" class="payment-method">
                                 <p>
                                 <strong>Send your bitcoins to:</strong> 1Ngx95Fk1YFPX5PhBwxPHXErrd5nPE9iFG
                                 </p>
+                                <button href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Download</button>
                             </div>
 
                             <div id="payment-mail" class="payment-method">
                                 <p>
                                 <strong>Send a thank you to:</strong> <a href="mailto:vincent@jousse.org">vincent@jousse.org</a>
                                 </p>
+
+                                <button href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Download</button>
                             </div>
 
-                            <button href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Download</button>
 
 
                         </div><!-- Contact Info End -->
