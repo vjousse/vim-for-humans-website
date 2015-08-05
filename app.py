@@ -118,14 +118,14 @@ def charge():
 
         db.session.add(download)
         db.session.commit()
-        return redirect(url_for('confirm', download_uuid=download_uuid))
+        return redirect(url_for('confirm', download_uuid=download_uuid, lang_code=g.get('current_lang', 'fr')))
 
     else:
 
         download = Download(uuid=download_uuid)
         db.session.add(download)
         db.session.commit()
-        return redirect(url_for('confirmfree', download_uuid=download_uuid))
+        return redirect(url_for('confirmfree', download_uuid=download_uuid, lang_code=g.get('current_lang', 'fr')))
 
 
 class Download(db.Model):
