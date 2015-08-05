@@ -11,3 +11,15 @@ input[type="radio"][name="payment"]:checked + label div.feature-box {
     border-bottom-left-radius:0;
     border-bottom-right-radius:0;
 }
+
+input[id="p-euros"]:checked ~ #payment-euros,
+input[id="p-flattr"]:checked ~ #payment-flattr,
+input[id="p-bitcoins"]:checked ~ #payment-bitcoins,
+input[id="p-mail"]:checked ~ #payment-mail
+{
+    display: block;
+}
+
+.payment-method {
+    display: none;
+}
