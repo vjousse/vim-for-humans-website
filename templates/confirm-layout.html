@@ -15,9 +15,9 @@
             <div class="col_half col_last">
                 <h2>{{ _('Download') }}</h2>
                 <div>
-                    <a href="{{ url_for('download_file', download_uuid=uuid, name='vim-pour-les-humains', format='pdf') }}" class="button button-3d button-small button-rounded button-red">{{ _('PDF Format') }}</a>
-                    <a href="{{ url_for('download_file', download_uuid=uuid, name='vim-pour-les-humains', format='epub') }}" class="button button-3d button-small button-rounded button-teal">{{ _('Epub Format' ) }}</a>
-                    <a href="{{ url_for('download_file', download_uuid=uuid, name='vim-pour-les-humains', format='mobi') }}" class="button button-3d button-small button-rounded button-yellow">{{ _('Mobi Format') }}</a>
+                    <a href="{{ url_for('download_file', download_uuid=uuid, name=gettext('vim-for-humans'), format='pdf', lang_code=g.current_lang) }}" class="button button-3d button-small button-rounded button-red">{{ _('PDF Format') }}</a>
+                    <a href="{{ url_for('download_file', download_uuid=uuid, name=gettext('vim-for-humans'), format='epub', lang_code=g.current_lang) }}" class="button button-3d button-small button-rounded button-teal">{{ _('Epub Format' ) }}</a>
+                    <a href="{{ url_for('download_file', download_uuid=uuid, name=gettext('vim-for-humans'), format='mobi', lang_code=g.current_lang) }}" class="button button-3d button-small button-rounded button-yellow">{{ _('Mobi Format') }}</a>
                 </div>
             </div>
 

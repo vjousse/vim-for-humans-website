@@ -1,7 +1,7 @@
 import os, uuid
 from flask import Flask, render_template, request, url_for, redirect, send_from_directory, g, abort
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.babel import Babel
+from flask.ext.babel import Babel, gettext
 from sqlalchemy import func 
 from datetime import datetime
 from functools import reduce
@@ -67,6 +67,13 @@ def index():
             min = result.min)
 
 @app.route('/download/<download_uuid>/<name>.<format>')
+def download_file_compat(download_uuid, name, format):
+    return redirect(url_for( \
+            'download_file', lang_code='fr', download_uuid=download_uuid, \
+            name=name, format=format \
+            ))
+
+@app.route('/<lang_code>/download/<download_uuid>/<name>.<format>')
 def download_file(download_uuid, name, format):
     download = Download.query.get(download_uuid)
     if format != 'pdf' and format != 'epub' and format != 'mobi':
@@ -75,7 +82,7 @@ def download_file(download_uuid, name, format):
     download.count += 1
     db.session.commit()
 
-    return send_from_directory(os.path.join(app.static_folder, 'book'), 'vim-pour-les-humains.{}'.format(format))
+    return send_from_directory(os.path.join(app.static_folder, 'book', g.get('current_lang', 'fr')), '{}.{}'.format(gettext('vim-for-humans'), format))
 
 @app.route('/<lang_code>/confirm/<download_uuid>')
 def confirm(download_uuid):

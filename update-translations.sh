@@ -1,4 +1,4 @@
 #!/bin/bash
 
-pybabel extract -F babel.cfg -o messages.pot ./templates
+pybabel extract -F babel.cfg -o messages.pot .
 pybabel update -i messages.pot -d translations
