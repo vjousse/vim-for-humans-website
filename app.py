@@ -67,7 +67,7 @@ def index():
             min = result.min)
 
 @app.route('/download/<download_uuid>/<name>.<format>')
-def downloadfile(download_uuid, name, format):
+def download_file(download_uuid, name, format):
     download = Download.query.get(download_uuid)
     if format != 'pdf' and format != 'epub' and format != 'mobi':
         format = 'pdf'
