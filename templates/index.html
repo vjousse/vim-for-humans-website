@@ -287,25 +287,56 @@
                             <h3>2 - Make the payment & get your ebook</h3>
 
                             <div id="payment-euros" class="payment-method">
+                                <div class="col_half">
 
-                            <script src="https://checkout.stripe.com/checkout.js"></script>
+                                    <script src="https://checkout.stripe.com/checkout.js"></script>
 
-                                <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                                    <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
 
-                                    <div class="col-md-2 col-xs-3 nopadding">
-                                        <input class="sm-form-control" type="number" name="amount" id="amount" value="9.99" min="0" step="any" placeholder="Amount in €"/>
+                                        <div class="col-md-2 col-xs-3 nopadding">
+                                            <input class="sm-form-control" type="number" name="amount" id="amount" value="9.99" min="0" step="any" placeholder="Amount in €"/>
+                                        </div>
+                                        <div class="col-md-10 col-xs-9">
+                                            <span style="padding-right: 20px">€</span>
+                                            <button type="submit" id="button-stripe" class="button button-3d button-red nomargin"/>Contribute and download</button>
+                                        </div>
+
+                                        <div class="clear"></div>
+
+
+                                        <ul style="padding-top: 15px; padding-left:15px;">
+                                            <li><strong>Moyenne des dons : {{ average_donation }}€</strong></li>
+                                            <li>Nombre de téléchargements : {{ download_number }}</li>
+                                            <li><strong>Nombre de dons : {{ donation_number }}</strong></li>
+                                            <li>Don minimum : {{ min }}€, don maximum : {{ max }}€</li>
+                                            <li><strong>Somme pour Framasoft : {{ framasoft_amount }}€</strong></li>
+
+                                        </ul>
+                                        <p><strong>20% des gains seront reversés à l'association de promotion du logiciel libre <a href="http://framasoft.net">Framasoft</a></strong>.<br />
+                                        La plateforme de paiement utilisée est <a href="http://stripe.com"><strong>Stripe</strong></a>.</p>
+
+                                    </form>
+                                </div>
+                                <div class="col_half col_last">
+                                    <div class="col_one_fourth center">
+                                        <div class="rounded-skill nobottommargin" data-color="#DD4B39" data-size="100" data-percent="25" data-width="3" data-animate="2500">2.5€</div>
+                                        Company taxes
                                     </div>
-                                    <div class="col-md-10 col-xs-9">
-                                        <span style="padding-right: 20px">€</span>
-                                        <button type="submit" id="button-stripe" class="button button-3d button-red nomargin"/>Contribute and download</button>
+                                    <div class="col_one_fourth center">
+                                        <div class="rounded-skill nobottommargin" data-color="#00ACEE" data-size="100" data-percent="6" data-width="3" data-animate="2500">0.6€</div>
+                                        Stripe
                                     </div>
+                                    <div class="col_one_fourth center">
 
-                                    <div class="clear"></div>
-
-                                    <p style="padding-top: 30px"><strong>20% des gains seront reversés à <a href="http://framasoft.net">Framasoft</a></strong>.<br />
-                                    La plateforme de paiement utilisée est <a href="http://stripe.com"><strong>Stripe</strong></a>. Vous pouvez contribuer par <strong>Paypal</strong> si vous préférez, le compte est le suivant : <strong>contact@vimebook.com</strong></p>
-
-                                </form>
+                                        <div class="rounded-skill nobottommargin" data-color="#EA4C89" data-size="100" data-percent="20" data-width="3" data-animate="2500">2€</div>
+                                        Framasoft donation
+                                    </div>
+                                    <div class="col_one_fourth col_last center">
+                                        <div class="rounded-skill nobottommargin" data-color="#3F729B" data-size="100" data-percent="49" data-width="3" data-animate="2500">4.9€</div>
+                                        Remaining
+                                    </div>
+                                    <h4 class="center">Repartition for 10€</h4>
+                                </div>
 
             <script>
             var handler = StripeCheckout.configure({
@@ -340,23 +371,36 @@
                                 <p>
                                     <strong>Paypal account:</strong> contact@vimebook.com
                                 </p>
-                                <button href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Download</button>
+
+                                <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                                    <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="Get the ebook"></input>
+
+                                <input type="hidden" name="amount" value="0" />
+                                </form>
                             </div>
 
                             <div id="payment-flattr" class="payment-method">
                                 <p>
                                     <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://vimebook.com/download"></a>
                                 </p>
-                                <div>
-                                    <button href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Download</button>
-                                </div>
+
+                                <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                                <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="Get the ebook"></input>
+
+                                <input type="hidden" name="amount" value="0" />
+                                </form>
                             </div>
 
                             <div id="payment-bitcoins" class="payment-method">
                                 <p>
                                 <strong>Send your bitcoins to:</strong> 1Ngx95Fk1YFPX5PhBwxPHXErrd5nPE9iFG
                                 </p>
-                                <button href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Download</button>
+
+                                <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                                <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="Get the ebook"></input>
+
+                                <input type="hidden" name="amount" value="0" />
+                                </form>
                             </div>
 
                             <div id="payment-mail" class="payment-method">
@@ -364,7 +408,12 @@
                                 <strong>Send a thank you to:</strong> <a href="mailto:vincent@jousse.org">vincent@jousse.org</a>, or on Twitter to <a href="http://twitter.com/vjousse">@vjousse</a>.
                                 </p>
 
-                                <button href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Download</button>
+
+                                <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                                <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="Get the ebook"></input>
+
+                                <input type="hidden" name="amount" value="0" />
+                                </form>
                             </div>
 
 

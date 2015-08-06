@@ -41,10 +41,7 @@ def root():
 
 @app.route('/<lang_code>')
 def index():
-    return render_template('index.html', key=STRIPE_KEYS['publishable_key'])
 
-@app.route('/download')
-def download():
     download_number = Download.query.count()
     donations = Download.query.filter(Download.price>0).all()
     donation_number = len(donations)
@@ -59,7 +56,8 @@ def download():
 
     framasoft_amount = "{:.2f}".format(total_donation * 0.20)
     average_donation = total_donation / donation_number
-    return render_template('download.html', \
+
+    return render_template('index.html', \
             key=STRIPE_KEYS['publishable_key'], \
             download_number = download_number, \
             donation_number = donation_number, \
