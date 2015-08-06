@@ -241,7 +241,7 @@
                                         <div class="fbox-icon" style="background-color: transparent;">
                                             <i class="icon-paypal"></i>
                                         </div>
-                                        <h3>PAYPAL<span class="subtitle">{{ _('Share the love') }}</span></h3>
+                                        <h3>PAYPAL<span class="subtitle">{{ _('Old school') }}</span></h3>
                                     </div>
                                 </div>
                             </label>
@@ -369,11 +369,11 @@
 
                             <div id="payment-paypal" class="payment-method">
                                 <p>
-                                    <strong>Paypal account:</strong> contact@vimebook.com
+                                <strong>{{ _('Paypal account:') }}</strong> contact@vimebook.com
                                 </p>
 
                                 <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
-                                    <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="Get the ebook"></input>
+                                    <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="{{ _('Get the ebook') }}"></input>
 
                                 <input type="hidden" name="amount" value="0" />
                                 </form>
@@ -385,7 +385,7 @@
                                 </p>
 
                                 <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
-                                <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="Get the ebook"></input>
+                                <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="{{ _('Get the ebook') }}"></input>
 
                                 <input type="hidden" name="amount" value="0" />
                                 </form>
@@ -393,11 +393,11 @@
 
                             <div id="payment-bitcoins" class="payment-method">
                                 <p>
-                                <strong>Send your bitcoins to:</strong> 1Ngx95Fk1YFPX5PhBwxPHXErrd5nPE9iFG
+                                <strong>{{ _('Send your bitcoins to:') }}</strong> 1Ngx95Fk1YFPX5PhBwxPHXErrd5nPE9iFG
                                 </p>
 
                                 <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
-                                <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="Get the ebook"></input>
+                                <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="{{ _('Get the ebook') }}"></input>
 
                                 <input type="hidden" name="amount" value="0" />
                                 </form>
@@ -405,12 +405,12 @@
 
                             <div id="payment-mail" class="payment-method">
                                 <p>
-                                <strong>Send a thank you to:</strong> <a href="mailto:vincent@jousse.org">vincent@jousse.org</a>, or on Twitter to <a href="http://twitter.com/vjousse">@vjousse</a>.
+                                {{ _('<strong>Send a thank you to:</strong> <a href="mailto:vincent@jousse.org">vincent@jousse.org</a>, or on Twitter to <a href="http://twitter.com/vjousse">@vjousse</a>.') }}
                                 </p>
 
 
                                 <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
-                                <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="Get the ebook"></input>
+                                <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="{{ _('Get the ebook') }}"></input>
 
                                 <input type="hidden" name="amount" value="0" />
                                 </form>

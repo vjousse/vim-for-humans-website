@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-04 10:30+0200\n"
+"POT-Creation-Date: 2015-08-06 18:52+0200\n"
 "PO-Revision-Date: 2015-06-15 15:24+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.0\n"
+
+#: templates/confirm-layout.html:37 templates/confirm-layout.html:44
+msgid "Back to the website"
+msgstr ""
 
 #: templates/index.html:13
 msgid "The best way to stay efficient while learning Vim"
@@ -67,7 +71,7 @@ msgstr "Bénéficier des meilleurs plugins"
 msgid "Have fun :-)"
 msgstr "Vous amuser :-)"
 
-#: templates/index.html:53 templates/layout.html:69
+#: templates/index.html:53 templates/layout.html:82 templates/layout.html:117
 msgid "Content"
 msgstr "Contenu"
 
@@ -238,19 +242,19 @@ msgstr "Télécharger le premier chapitre !"
 msgid "OR"
 msgstr "OU"
 
-#: templates/index.html:173
+#: templates/index.html:171
 msgid "Frequently Asked Questions"
 msgstr "Foire Aux Questions"
 
-#: templates/index.html:174
+#: templates/index.html:172
 msgid "Would this site be serious without a FAQ?"
 msgstr "Parce que tout site se respectant mérite sa FAQ"
 
-#: templates/index.html:179
+#: templates/index.html:177
 msgid "Is it really free?"
 msgstr "Est-ce que c'est vraiment gratuit ?"
 
-#: templates/index.html:180
+#: templates/index.html:178
 msgid ""
 "Free price doesn't mean that it's free. I firmly believe that everybody "
 "has something to give in exchange of this ebook. The difference is just "
@@ -260,31 +264,31 @@ msgid ""
 "free-price/\">about free price here</a>."
 msgstr ""
 "Prix libre ne veux pas dire que c'est gratuit. Je suis convaincu que "
-"chaque personne a quelque chose à apporter en échange de cet ebook. "
-"Je vous laisse donc choisir quoi. Vous êtes libre de payer le prix "
-"que vous voulez. De l' argent, des bitcoins, un <a "
+"chaque personne a quelque chose à apporter en échange de cet ebook. Je "
+"vous laisse donc choisir quoi. Vous êtes libre de payer le prix que vous "
+"voulez. De l' argent, des bitcoins, un <a "
 "href=\"https://flattr.com/profile/vjousse\">Flattr</a>, un email ou un "
 "merci feront très bien l'affaire. <a href=\"http://ploum.net/le-prix-"
 "libre-une-impossible-utopie/\">Plus d'infos au sujet du prix libre "
 "ici.</a>"
 
-#: templates/index.html:184
+#: templates/index.html:182
 msgid "Can I get a preview of the content?"
 msgstr "Est-ce que je peux avoir un aperçu du contenu ?"
 
-#: templates/index.html:185
+#: templates/index.html:183
 msgid "Sure, you can even"
 msgstr "Bien sûr, vous pouvez même "
 
-#: templates/index.html:185
+#: templates/index.html:183
 msgid "download the first chapter"
 msgstr "télécharger le premier chapitre !"
 
-#: templates/index.html:192
+#: templates/index.html:190
 msgid "Is this ebook suited for Vim experts?"
 msgstr "Est-ce que cet ebook est adapté pour les experts de Vim ?"
 
-#: templates/index.html:194
+#: templates/index.html:192
 msgid ""
 "Clearly not. This book is for Vim novices wishing not to quit after two "
 "days. The goal is to help you take the first step without loosing all "
@@ -296,42 +300,168 @@ msgid ""
 "href=\"http://www.amazon.fr/gp/product/1934356980/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=1934356980&linkCode=as2\">Practical"
 " Vim</a>."
 msgstr ""
-"Clairement pas. Ce livre s'adresse aux novices de Vim désirant bénéficier "
-"d'un moyen pour ne pas l’abandonner au bout de deux jours. Le but est de "
-"vous mettre le pied à l'étrier et de vous permettre de franchir la "
-"première marche sans perdre toute votre productivité. Libre à vous ensuite "
-"d'utiliser toutes les ressources disponibles sur internet pour maitriser "
-"les subtilités les plus obscures de Vim."
+"Clairement pas. Ce livre s'adresse aux novices de Vim désirant bénéficier"
+" d'un moyen pour ne pas l’abandonner au bout de deux jours. Le but est de"
+" vous mettre le pied à l'étrier et de vous permettre de franchir la "
+"première marche sans perdre toute votre productivité. Libre à vous "
+"ensuite d'utiliser toutes les ressources disponibles sur internet pour "
+"maitriser les subtilités les plus obscures de Vim."
 
-#: templates/index.html:199
+#: templates/index.html:197
 msgid "Can I thank you and share the love?"
 msgstr "Est-ce que je peux vous remercier et faire tourner ?"
 
-#: templates/index.html:200
+#: templates/index.html:198
 msgid "The ebook is published under the CC licence"
 msgstr "Cet ebook est publié sous une licence CC"
 
-#: templates/index.html:201
+#: templates/index.html:199
 msgid "So you can share it as you want!"
 msgstr "Donc vous pouvez le partager sans soucis !"
 
-#: templates/index.html:211 templates/layout.html:71
+#: templates/index.html:214 templates/layout.html:84 templates/layout.html:117
 msgid "Download"
 msgstr "Télécharger"
 
-#: templates/index.html:212
-msgid "Here we are!"
-msgstr "Nous y voilà enfin!"
+#: templates/index.html:215
+msgid "Here we are! Well, almost."
+msgstr "Nous y voilà ! Enfin presque."
 
-#: templates/layout.html:31
+#: templates/index.html:218
+msgid "Choose your free price payment method"
+msgstr "Choisissez votre manière de payer librement"
+
+#: templates/index.html:232
+msgid "Credit Card"
+msgstr "Carte bleue"
+
+#: templates/index.html:232
+msgid "Starting at 0€"
+msgstr "À partir de 0€"
+
+#: templates/index.html:244
+msgid "Old school"
+msgstr "À l'ancienne"
+
+#: templates/index.html:256
+msgid "Flattr my page"
+msgstr "Flattr ma page"
+
+#: templates/index.html:268
+msgid "Hype!"
+msgstr "La classe !"
+
+#: templates/index.html:282
+msgid "Share the love"
+msgstr "Un petit merci"
+
+#: templates/index.html:287
+msgid "Make the payment & get your ebook"
+msgstr "Effectuez votre paiement et obtenez votre ebook"
+
+#: templates/index.html:301
+msgid "Contribute and download"
+msgstr "Contribuez et téléchargez"
+
+#: templates/index.html:308
+msgid "Average payment:"
+msgstr "Moyenne des paiements :"
+
+#: templates/index.html:309
+msgid "Downloads:"
+msgstr "Téléchargements :"
+
+#: templates/index.html:310
+msgid "Donations:"
+msgstr "Dons :"
+
+#: templates/index.html:311
+msgid "Minimum payment:"
+msgstr "Paiement minimum :"
+
+#: templates/index.html:311
+msgid "maximum payment:"
+msgstr "paiement maximum :"
+
+#: templates/index.html:312
+msgid "Amount for Framasoft:"
+msgstr "Montant pour Framasoft :"
+
+#: templates/index.html:315
+msgid ""
+"20%% of the earnings are donated to the <a "
+"href=\"http://framasoft.net\">Framasoft association</a>, promoting Open "
+"Source."
+msgstr ""
+"20%% des gains sont reversés à l'association de promotion du logiciel "
+"libre <a href=\"http://framasoft.net\">Framasoft</a>."
+
+#: templates/index.html:316
+msgid ""
+"The payment platform used is <a "
+"href=\"http://stripe.com\"><strong>Stripe</strong></a>."
+msgstr ""
+"La plateforme de paiement utilisée est <a "
+"href=\"http://stripe.com\"><strong>Stripe</strong></a>."
+
+#: templates/index.html:323
+msgid "Company taxes"
+msgstr "Impôts entreprise"
+
+#: templates/index.html:327
+msgid "Stripe"
+msgstr ""
+
+#: templates/index.html:332
+msgid "Framasoft donation"
+msgstr "Dons Framasoft"
+
+#: templates/index.html:336
+msgid "Remaining"
+msgstr "Reste"
+
+#: templates/index.html:338
+msgid "Repartition for 10€"
+msgstr "Répartition pour 10€"
+
+#: templates/index.html:372
+msgid "Paypal account:"
+msgstr "Compte Paypal :"
+
+#: templates/index.html:376 templates/index.html:388 templates/index.html:400
+#: templates/index.html:413
+msgid "Get the ebook"
+msgstr "Télécharger l'ebook"
+
+#: templates/index.html:396
+msgid "Send your bitcoins to:"
+msgstr "Envoyez des bitcoins à cette adresse :"
+
+#: templates/index.html:408
+msgid ""
+"<strong>Send a thank you to:</strong> <a "
+"href=\"mailto:vincent@jousse.org\">vincent@jousse.org</a>, or on Twitter "
+"to <a href=\"http://twitter.com/vjousse\">@vjousse</a>."
+msgstr ""
+"<strong>Envoyez un merci à :</strong> <a "
+"href=\"mailto:vincent@jousse.org\">vincent@jousse.org</a>, ou sur Twitter "
+"to <a href=\"http://twitter.com/vjousse\">@vjousse</a>."
+
+#: templates/layout.html:32
 msgid "Vim for humans | Free price ebook"
 msgstr "Vim pour les humains | Ebook à prix libre"
 
-#: templates/layout.html:68
+#: templates/layout.html:81 templates/layout.html:117
 msgid "Home"
 msgstr "Accueil"
 
-#: templates/layout.html:70
+#: templates/layout.html:83 templates/layout.html:117
 msgid "FAQ"
+msgstr ""
+
+#: templates/layout.html:111
+msgid ""
+"This content is published under the <a rel=\"license\" "
+"href=\"http://creativecommons.org/licenses/by/4.0/\">CC licence</a>"
 msgstr ""
 
