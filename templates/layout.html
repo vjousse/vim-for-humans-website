@@ -68,8 +68,8 @@
                     <!-- Logo
                     ============================================= -->
                     <div id="logo">
-                        <a href="index.html" class="standard-logo" data-dark-logo="{{ url_for('static', filename='images/' + g.current_lang + '-logo.png') }}"><img src="{{ url_for('static', filename='images/' + g.current_lang + '-logo.png') }}" alt="Canvas Logo"></a>
-                        <a href="index.html" class="retina-logo" data-dark-logo="{{ url_for('static', filename='images/' + g.current_lang + '-logo@2x.png') }}"><img src="{{ url_for('static', filename='images/' + g.current_lang + '-logo@2x.png') }}" alt="Canvas Logo"></a>
+                        <a href="{{ url_for('root') }}" class="standard-logo" data-dark-logo="{{ url_for('static', filename='images/' + g.current_lang + '-logo.png') }}"><img src="{{ url_for('static', filename='images/' + g.current_lang + '-logo.png') }}" alt="Canvas Logo"></a>
+                        <a href="{{ url_for('root') }}" class="retina-logo" data-dark-logo="{{ url_for('static', filename='images/' + g.current_lang + '-logo@2x.png') }}"><img src="{{ url_for('static', filename='images/' + g.current_lang + '-logo@2x.png') }}" alt="Canvas Logo"></a>
                     </div><!-- #logo end -->
 
                     <!-- Primary Navigation
@@ -77,10 +77,12 @@
                     <nav id="primary-menu">
 
                         <ul class="one-page-menu">
+                            {% block menu_top %}
                             <li class="current"><a href="#" data-href="#section-home"><div>{{ _('Home') }}</div></a></li>
                             <li><a href="#" data-href="#section-content"><div>{{ _('Content') }}</div></a></li>
                             <li><a href="#" data-href="#section-faqs"><div>{{ _('FAQ') }}</div></a></li>
                             <li><a href="#" data-href="#section-download"><div>{{ _('Download') }}</div></a></li>
+                            {% endblock %}
                         </ul>
 
                     </nav><!-- #primary-menu end -->
@@ -111,7 +113,9 @@
 
                     <div class="col_half col_last tright">
                         <div class="copyrights-menu copyright-links fright clearfix">
-                            <a href="#">Home</a>/<a href="#">About</a>/<a href="#">Features</a>/<a href="#">Portfolio</a>/<a href="#">FAQs</a>/<a href="#">Contact</a>
+                            {% block menu_bottom %}
+                            <a href="#" data-href="#section-home">{{ _('Home') }}</a>/<a href="#" data-href="#section-content">{{ _('Content') }}</a>/<a href="#" data-href="#section-faqs">{{ _('FAQ') }}</a>/<a href="#" data-href="#section-download">{{ _('Download') }}</a></li>
+                            {% endblock %}
                         </div>
                         <div class="clear"></div>
                         <div class="fright clearfix">

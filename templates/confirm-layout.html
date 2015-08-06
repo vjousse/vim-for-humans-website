@@ -1,9 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="row">
-    <div class="span12">
-        <div id="main_content" role="main">
+<!-- Content
+============================================= -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
             {% block text %}
             <h2 class="page-title">Merci !</h2>
             <p>Votre contribution a bien été enregistrée et votre paiement de <strong>{{amount}} €</strong> validé. <br />Vous pouvez garder <a href="{{request.url}}">le lien de cette page</a> afin de re-télécharger le livre plus tard.<br />20% des gains seront reversés à l'association de promotion du libre <a href="http://www.framasoft.net/">Framasoft</a>.</p>.
@@ -14,9 +19,24 @@
                 <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='epub') }}"><button class="btn btn-light-blue" type="button">Format EPUB</button></a>
                 <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='mobi') }}"><button class="btn btn-green" type="button">Format MOBI</button></a>
             </div>
+
+
         </div>
     </div>
-</div>
+
+</section><!-- #content end -->
+
+{% endblock %}
+
+{% block menu_top %}
+
+<li><a href="{{ url_for('root') }}" data-href="#section-content"><div>{{ _('Back to the website') }}</div></a></li>
+
 {% endblock %}
 
 
+{% block menu_bottom %}
+
+<a href="{{ url_for('root') }}"><div>{{ _('Back to the website') }}</a>
+
+{% endblock %}
