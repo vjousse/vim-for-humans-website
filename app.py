@@ -83,7 +83,7 @@ def confirm(download_uuid):
     return render_template('confirm.html', amount=download.price, uuid=download_uuid)
 
 @app.route('/<lang_code>/confirm-other/<download_uuid>')
-def confirmfree(download_uuid):
+def confirm_free(download_uuid):
     download = Download.query.get(download_uuid)
     return render_template('confirm-free.html', uuid=download_uuid)
 
@@ -123,7 +123,7 @@ def charge():
         download = Download(uuid=download_uuid)
         db.session.add(download)
         db.session.commit()
-        return redirect(url_for('confirmfree', download_uuid=download_uuid, lang_code=g.get('current_lang', 'fr')))
+        return redirect(url_for('confirm_free', download_uuid=download_uuid, lang_code=g.get('current_lang', 'fr')))
 
 
 class Download(db.Model):
