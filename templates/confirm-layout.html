@@ -9,15 +9,19 @@
 
         <div class="container clearfix">
 
-            {% block text %}
-            <h2 class="page-title">Merci !</h2>
-            <p>Votre contribution a bien été enregistrée et votre paiement de <strong>{{amount}} €</strong> validé. <br />Vous pouvez garder <a href="{{request.url}}">le lien de cette page</a> afin de re-télécharger le livre plus tard.<br />20% des gains seront reversés à l'association de promotion du libre <a href="http://www.framasoft.net/">Framasoft</a>.</p>.
-            {% endblock %}
-            <h2>Télécharger</h2>
-            <div>
-                <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='pdf') }}"><button class="btn btn-orange" type="button">Format PDF</button></a>
-                <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='epub') }}"><button class="btn btn-light-blue" type="button">Format EPUB</button></a>
-                <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='mobi') }}"><button class="btn btn-green" type="button">Format MOBI</button></a>
+            <div class="col_half">
+                {% block text %}
+                <h2 class="page-title">Merci !</h2>
+                <p>Votre contribution a bien été enregistrée et votre paiement de <strong>{{amount}} €</strong> validé. <br />Vous pouvez garder <a href="{{request.url}}">le lien de cette page</a> afin de re-télécharger le livre plus tard.<br />20% des gains seront reversés à l'association de promotion du libre <a href="http://www.framasoft.net/">Framasoft</a>.</p>
+                {% endblock %}
+            </div>
+            <div class="col_half col_last">
+                <h2>Télécharger</h2>
+                <div>
+                    <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='pdf') }}" class="button button-3d button-small button-rounded button-red">Format PDF</a>
+                    <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='epub') }}" class="button button-3d button-small button-rounded button-teal">Format epub</a>
+                    <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='mobi') }}" class="button button-3d button-small button-rounded button-yellow">Format mobi</a>
+                </div>
             </div>
 
 
