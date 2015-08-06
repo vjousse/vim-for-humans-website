@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-06 18:52+0200\n"
+"POT-Creation-Date: 2015-08-06 19:20+0200\n"
 "PO-Revision-Date: 2015-06-15 15:24+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -17,9 +17,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.0\n"
 
-#: templates/confirm-layout.html:37 templates/confirm-layout.html:44
+#: templates/confirm-layout.html:16 templates/index.html:214
+#: templates/layout.html:84 templates/layout.html:117
+msgid "Download"
+msgstr "Télécharger"
+
+#: templates/confirm-layout.html:18
+msgid "PDF Format"
+msgstr "Format pdf"
+
+#: templates/confirm-layout.html:19
+msgid "Epub Format"
+msgstr "Format epub"
+
+#: templates/confirm-layout.html:20
+msgid "Mobi Format"
+msgstr "Format mobi"
+
+#: templates/confirm-layout.html:34 templates/confirm-layout.html:41
 msgid "Back to the website"
+msgstr "Retour au site"
+
+#: templates/confirm.html:4
+msgid "Thank you!"
+msgstr "Merci !"
+
+#: templates/confirm.html:5
+#, python-format
+msgid ""
+"Your contribution has been recorded and your payment of <strong> "
+"%(amount)s</strong> € validated.<br />You can save <a "
+"href=\"%(request)s\">the link to this page</a> to download the book again"
+" later on.<br />20%% of the earnings are donated to <a "
+"href=\"http://www.framasoft.net/\">Framasoft</a>, an association "
+"promoting Free Software."
 msgstr ""
+"Votre contribution a bien été enregistrée et votre paiement de <strong> "
+"%(amount)s</strong> € validé.<br />Vous pouvez <a "
+"href=\"%(request)s\">sauvegarder le lien vers cette page</a> pour "
+"télécharger le livre de nouveau plus tard.<br />20%% des gains sont "
+"reversés à <a href=\"http://www.framasoft.net/\">Framasoft</a>, une "
+"association de promotion du logiciel libre."
 
 #: templates/index.html:13
 msgid "The best way to stay efficient while learning Vim"
@@ -319,10 +357,6 @@ msgstr "Cet ebook est publié sous une licence CC"
 msgid "So you can share it as you want!"
 msgstr "Donc vous pouvez le partager sans soucis !"
 
-#: templates/index.html:214 templates/layout.html:84 templates/layout.html:117
-msgid "Download"
-msgstr "Télécharger"
-
 #: templates/index.html:215
 msgid "Here we are! Well, almost."
 msgstr "Nous y voilà ! Enfin presque."
@@ -388,10 +422,11 @@ msgid "Amount for Framasoft:"
 msgstr "Montant pour Framasoft :"
 
 #: templates/index.html:315
+#, python-format
 msgid ""
 "20%% of the earnings are donated to the <a "
-"href=\"http://framasoft.net\">Framasoft association</a>, promoting Open "
-"Source."
+"href=\"http://framasoft.net\">Framasoft association</a>, promoting Free "
+"Software."
 msgstr ""
 "20%% des gains sont reversés à l'association de promotion du logiciel "
 "libre <a href=\"http://framasoft.net\">Framasoft</a>."
@@ -444,8 +479,8 @@ msgid ""
 "to <a href=\"http://twitter.com/vjousse\">@vjousse</a>."
 msgstr ""
 "<strong>Envoyez un merci à :</strong> <a "
-"href=\"mailto:vincent@jousse.org\">vincent@jousse.org</a>, ou sur Twitter "
-"to <a href=\"http://twitter.com/vjousse\">@vjousse</a>."
+"href=\"mailto:vincent@jousse.org\">vincent@jousse.org</a>, ou sur Twitter"
+" to <a href=\"http://twitter.com/vjousse\">@vjousse</a>."
 
 #: templates/layout.html:32
 msgid "Vim for humans | Free price ebook"

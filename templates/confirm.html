@@ -1,8 +1,8 @@
 {% extends "confirm-layout.html" %}
 {% block text %}
 
-<h2 class="page-title">Merci !</h2>
-<p>Votre contribution a bien été enregistrée et votre paiement de <strong>{{amount}} €</strong> validé. <br />Vous pouvez garder <a href="{{request.url}}">le lien de cette page</a> afin de re-télécharger le livre plus tard.<br />20% des gains seront reversés à l'association de promotion du libre <a href="http://www.framasoft.net/">Framasoft</a>.</p>.
+<h2 class="page-title">{{ _('Thank you!') }}</h2>
+<p>{{ _("Your contribution has been recorded and your payment of <strong> %(amount)s</strong> € validated.<br />You can save <a href=\"%(request)s\">the link to this page</a> to download the book again later on.<br />20%% of the earnings are donated to <a href=\"http://www.framasoft.net/\">Framasoft</a>, an association promoting Free Software.", amount=amount, request=request.url) }}</p>.
 
 
 {% endblock %}

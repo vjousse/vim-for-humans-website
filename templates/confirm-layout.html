@@ -10,17 +10,14 @@
         <div class="container clearfix">
 
             <div class="col_half">
-                {% block text %}
-                <h2 class="page-title">Merci !</h2>
-                <p>Votre contribution a bien été enregistrée et votre paiement de <strong>{{amount}} €</strong> validé. <br />Vous pouvez garder <a href="{{request.url}}">le lien de cette page</a> afin de re-télécharger le livre plus tard.<br />20% des gains seront reversés à l'association de promotion du libre <a href="http://www.framasoft.net/">Framasoft</a>.</p>
-                {% endblock %}
+                {% block text %}{% endblock %}
             </div>
             <div class="col_half col_last">
-                <h2>Télécharger</h2>
+                <h2>{{ _('Download') }}</h2>
                 <div>
-                    <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='pdf') }}" class="button button-3d button-small button-rounded button-red">Format PDF</a>
-                    <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='epub') }}" class="button button-3d button-small button-rounded button-teal">Format epub</a>
-                    <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='mobi') }}" class="button button-3d button-small button-rounded button-yellow">Format mobi</a>
+                    <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='pdf') }}" class="button button-3d button-small button-rounded button-red">{{ _('PDF Format') }}</a>
+                    <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='epub') }}" class="button button-3d button-small button-rounded button-teal">{{ _('Epub Format' ) }}</a>
+                    <a href="{{ url_for('downloadfile', download_uuid=uuid, name='vim-pour-les-humains', format='mobi') }}" class="button button-3d button-small button-rounded button-yellow">{{ _('Mobi Format') }}</a>
                 </div>
             </div>
 
