@@ -215,7 +215,7 @@
                             <span>{{ _('Here we are! Well, almost.') }}</span>
                         </div>
 
-                        <h3>1 - Choose your free price payment method</h3>
+                        <h3>1 - {{ _('Choose your free price payment method') }}</h3>
 
 
                         <!-- Contact Info
@@ -229,7 +229,7 @@
                                         <div class="fbox-icon" style="background-color: transparent;">
                                             <i class="icon-euro"></i>
                                         </div>
-                                        <h3>Credit Card<span class="subtitle">Starting at 0€</span></h3>
+                                        <h3>{{ _('Credit Card') }}<span class="subtitle">{{ _('Starting at 0€') }}</span></h3>
                                     </div>
                                 </div>
                             </label>
@@ -241,7 +241,7 @@
                                         <div class="fbox-icon" style="background-color: transparent;">
                                             <i class="icon-paypal"></i>
                                         </div>
-                                        <h3>PAYPAL<span class="subtitle">Share the love</span></h3>
+                                        <h3>PAYPAL<span class="subtitle">{{ _('Share the love') }}</span></h3>
                                     </div>
                                 </div>
                             </label>
@@ -253,7 +253,7 @@
                                         <div class="fbox-icon" style="background-color: transparent;">
                                             <i class="icon-flattr"></i>
                                         </div>
-                                        <h3>Flattr<span class="subtitle">Flattr my page</span></h3>
+                                        <h3>Flattr<span class="subtitle">{{ _('Flattr my page') }}</span></h3>
                                     </div>
                                 </div>
                             </label>
@@ -265,7 +265,7 @@
                                         <div class="fbox-icon" style="background-color: transparent;">
                                             <i class="icon-bitcoin2"></i>
                                         </div>
-                                        <h3>Bitcoins<span class="subtitle">Hype!</span></h3>
+                                        <h3>Bitcoins<span class="subtitle">{{ _('Hype!') }}</span></h3>
                                     </div>
                                 </div>
 
@@ -279,12 +279,12 @@
                                         <div class="fbox-icon" style="background-color: transparent;">
                                             <i class="icon-heart3"></i>
                                         </div>
-                                        <h3>Message<span class="subtitle">Share the love</span></h3>
+                                        <h3>Message<span class="subtitle">{{ _('Share the love') }}</span></h3>
                                     </div>
                                 </div>
                             </label>
 
-                            <h3>2 - Make the payment & get your ebook</h3>
+                            <h3>2 - {{ _('Make the payment & get your ebook') }}</h3>
 
                             <div id="payment-euros" class="payment-method">
                                 <div class="col_half">
@@ -298,44 +298,44 @@
                                         </div>
                                         <div class="col-md-10 col-xs-9">
                                             <span style="padding-right: 20px">€</span>
-                                            <button type="submit" id="button-stripe" class="button button-3d button-red nomargin"/>Contribute and download</button>
+                                            <button type="submit" id="button-stripe" class="button button-3d button-red nomargin"/>{{ _('Contribute and download') }}</button>
                                         </div>
 
                                         <div class="clear"></div>
 
 
                                         <ul style="padding-top: 15px; padding-left:15px;">
-                                            <li><strong>Moyenne des dons : {{ average_donation }}€</strong></li>
-                                            <li>Nombre de téléchargements : {{ download_number }}</li>
-                                            <li><strong>Nombre de dons : {{ donation_number }}</strong></li>
-                                            <li>Don minimum : {{ min }}€, don maximum : {{ max }}€</li>
-                                            <li><strong>Somme pour Framasoft : {{ framasoft_amount }}€</strong></li>
+                                            <li><strong>{{ _('Average payment:') }} {{ average_donation }}€</strong></li>
+                                            <li>{{ _('Downloads:') }} {{ download_number }}</li>
+                                            <li><strong>{{ _('Donations:') }} {{ donation_number }}</strong></li>
+                                            <li>{{ _('Minimum payment:') }} {{ min }}€, {{ _('maximum payment:') }} {{ max }}€</li>
+                                            <li><strong>{{ _('Amount for Framasoft:') }} {{ framasoft_amount }}€</strong></li>
 
                                         </ul>
-                                        <p><strong>20% des gains seront reversés à l'association de promotion du logiciel libre <a href="http://framasoft.net">Framasoft</a></strong>.<br />
-                                        La plateforme de paiement utilisée est <a href="http://stripe.com"><strong>Stripe</strong></a>.</p>
+                                        <p><strong>{{ _('20%% of the earnings are donated to the <a href="http://framasoft.net">Framasoft association</a>, promoting Open Source.') }}</strong><br />
+                                        {{ _('The payment platform used is <a href="http://stripe.com"><strong>Stripe</strong></a>.') }}</p>
 
                                     </form>
                                 </div>
                                 <div class="col_half col_last">
                                     <div class="col_one_fourth center">
                                         <div class="rounded-skill nobottommargin" data-color="#DD4B39" data-size="100" data-percent="25" data-width="3" data-animate="2500">2.5€</div>
-                                        Company taxes
+                                        {{ _('Company taxes') }}
                                     </div>
                                     <div class="col_one_fourth center">
                                         <div class="rounded-skill nobottommargin" data-color="#00ACEE" data-size="100" data-percent="6" data-width="3" data-animate="2500">0.6€</div>
-                                        Stripe
+                                        {{ _('Stripe') }}
                                     </div>
                                     <div class="col_one_fourth center">
 
                                         <div class="rounded-skill nobottommargin" data-color="#EA4C89" data-size="100" data-percent="20" data-width="3" data-animate="2500">2€</div>
-                                        Framasoft donation
+                                        {{ _('Framasoft donation') }}
                                     </div>
                                     <div class="col_one_fourth col_last center">
                                         <div class="rounded-skill nobottommargin" data-color="#3F729B" data-size="100" data-percent="49" data-width="3" data-animate="2500">4.9€</div>
-                                        Remaining
+                                        {{ _('Remaining') }}
                                     </div>
-                                    <h4 class="center">Repartition for 10€</h4>
+                                    <h4 class="center">{{ _('Repartition for 10€') }}</h4>
                                 </div>
 
             <script>
