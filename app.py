@@ -76,8 +76,11 @@ def download_file_compat(download_uuid, name, format):
 @app.route('/<lang_code>/download/<download_uuid>/<name>.<format>')
 def download_file(download_uuid, name, format):
     download = Download.query.get(download_uuid)
-    if format != 'pdf' and format != 'epub' and format != 'mobi':
-        format = 'pdf'
+    if format not in ['pdf', 'epub', 'mobi']:
+        abort(404)
+
+    if name not in ['vim-for-humans', 'vim-pour-les-humains']:
+        abort(404)
 
     download.count += 1
     db.session.commit()
