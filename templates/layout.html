@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flag-icon.css') }}" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
     	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -82,6 +83,13 @@
                             <li><a href="#" data-href="#section-content"><div>{{ _('Content') }}</div></a></li>
                             <li><a href="#" data-href="#section-faqs"><div>{{ _('FAQ') }}</div></a></li>
                             <li><a href="#" data-href="#section-download"><div>{{ _('Download') }}</div></a></li>
+                            {% if g.current_lang != 'en' %}
+                            <li><a href="{{ url_for('index', lang_code='en' ) }}"><div><span class="flag-icon flag-icon-gb" style="display:inline-block"></span></div></a></li>
+                            {% endif %}
+                            {% if g.current_lang != 'fr' %}
+                            <li><a href="{{ url_for('index', lang_code='fr' ) }}"><div><span class="flag-icon flag-icon-fr" style="display:inline-block"></span></div></a></li>
+                            {% endif %}
+
                             {% endblock %}
                         </ul>
 
