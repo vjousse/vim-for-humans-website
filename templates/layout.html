@@ -69,8 +69,8 @@
                     <!-- Logo
                     ============================================= -->
                     <div id="logo">
-                        <a href="{{ url_for('root') }}" class="standard-logo" data-dark-logo="{{ url_for('static', filename='images/' + g.current_lang + '-logo.png') }}"><img src="{{ url_for('static', filename='images/' + g.current_lang + '-logo.png') }}" alt="Canvas Logo"></a>
-                        <a href="{{ url_for('root') }}" class="retina-logo" data-dark-logo="{{ url_for('static', filename='images/' + g.current_lang + '-logo@2x.png') }}"><img src="{{ url_for('static', filename='images/' + g.current_lang + '-logo@2x.png') }}" alt="Canvas Logo"></a>
+                        <a href="{{ url_for('index', lang_code=g.current_lang) }}" class="standard-logo" data-dark-logo="{{ url_for('static', filename='images/' + g.current_lang + '-logo.png') }}"><img src="{{ url_for('static', filename='images/' + g.current_lang + '-logo.png') }}" alt="Canvas Logo"></a>
+                        <a href="{{ url_for('index', lang_code=g.current_lang) }}" class="retina-logo" data-dark-logo="{{ url_for('static', filename='images/' + g.current_lang + '-logo@2x.png') }}"><img src="{{ url_for('static', filename='images/' + g.current_lang + '-logo@2x.png') }}" alt="Canvas Logo"></a>
                     </div><!-- #logo end -->
 
                     <!-- Primary Navigation
@@ -84,10 +84,10 @@
                             <li><a href="#" data-href="#section-faqs"><div>{{ _('FAQ') }}</div></a></li>
                             <li><a href="#" data-href="#section-download"><div>{{ _('Download') }}</div></a></li>
                             {% if g.current_lang != 'en' %}
-                            <li><a href="{{ url_for('index', lang_code='en' ) }}"><div><span class="flag-icon flag-icon-gb" style="display:inline-block"></span></div></a></li>
+                            <li><a href="{{ url_for(request.url_rule.endpoint, lang_code='en' ) }}"><div><span class="flag-icon flag-icon-gb" style="display:inline-block"></span></div></a></li>
                             {% endif %}
                             {% if g.current_lang != 'fr' %}
-                            <li><a href="{{ url_for('index', lang_code='fr' ) }}"><div><span class="flag-icon flag-icon-fr" style="display:inline-block"></span></div></a></li>
+                            <li><a href="{{ url_for(request.url_rule.endpoint, lang_code='fr' ) }}"><div><span class="flag-icon flag-icon-fr" style="display:inline-block"></span></div></a></li>
                             {% endif %}
 
                             {% endblock %}
