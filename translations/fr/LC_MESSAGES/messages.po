@@ -487,6 +487,9 @@ msgstr ""
 "href=\"mailto:vincent@jousse.org\">vincent@jousse.org</a>, ou sur Twitter"
 " to <a href=\"http://twitter.com/vjousse\">@vjousse</a>."
 
+msgid "Vim for humans"
+msgstr "Vim pour les humains"
+
 #: templates/layout.html:32
 msgid "Vim for humans | Free price ebook"
 msgstr "Vim pour les humains | Ebook à prix libre"
