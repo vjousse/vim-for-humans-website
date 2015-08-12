@@ -130,7 +130,7 @@
                     <h4>2 – {{ _('Usable Vim') }}</h4>
                     <blockquote>
                         <p>
-                        {{ _("In this chapter we see how to configure Vim to make it usable by a \"normal\" human. Syntax highlighting, file explorer (The NERD Tree), color scheme (Solarized), using the mouse ... We also discuss why it is important to abandon the mouse for the health of your hands / fingers. You can also directly <a href=\"#\">download the entire chapter</a>.") }}
+                        {{ _("In this chapter we see how to configure Vim to make it usable by a \"normal\" human. Syntax highlighting, file explorer (The NERD Tree), color scheme (Solarized), using the mouse ... We also discuss why it is important to abandon the mouse for the health of your hands / fingers. You can also directly <a href=\"%(link)s\">download the entire chapter</a>.", link=url_for('static', filename=g.current_lang + '-vim-extract-chap1.pdf')) }}
                         </p>
                         
                     </blockquote>
@@ -158,7 +158,7 @@
 
                     <div class="center">
 
-                        <a href="{{ url_for('static', filename='vim-pour-les-humains-extrait-chap1.pdf') }}" data-animate="tada" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>{{ _('Download the first chapter!') }}</a> - {{ _('OR') }} - <a href="#" data-scrollto="#section-download" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>{{ _('Download the ebook') }}</a>
+                        <a href="{{ url_for('static', filename=g.current_lang + '-vim-extract-chap1.pdf') }}" data-animate="tada" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>{{ _('Download the first chapter!') }}</a> - {{ _('OR') }} - <a href="#" data-scrollto="#section-download" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>{{ _('Download the ebook') }}</a>
 
                     </div>
 
@@ -180,7 +180,7 @@
                         <div class="line"></div>
 
                         <h4 id="faq-2"><strong>Q.</strong> {{ _('Can I get a preview of the content?') }}</h4>
-                        <p>{{ _('Sure, you can even') }} <a href=\"{{ url_for('static', filename='vim-pour-les-humains-extrait-chap1.pdf') }}\">{{ _('download the first chapter') }}</a></p>
+                        <p>{{ _('Sure, you can even') }} <a href=\"{{ url_for('static', filename=g.current_lang + '-vim-extract-chap1.pdf') }}\">{{ _('download the first chapter') }}</a></p>
 
 
                     </div>
@@ -484,7 +484,7 @@
                         un humain « normal ». Coloration syntaxique, explorateur de fichiers
                         (The NERD Tree), thème de couleurs (Solarized), utilisation de la
                         souris, … Nous abordons aussi pourquoi il sera important de se passer de
-                        la souris pour la santé de vos mains/doigts. Vous pouvez d'ailleurs directement <a href="{{ url_for('static', filename='vim-pour-les-humains-extrait-chap1.pdf') }}">télécharger le chapitre entier</a>.</p>
+                        la souris pour la santé de vos mains/doigts. Vous pouvez d'ailleurs directement <a href="{{ url_for('static', filename=g.current_lang + '-vim-extract-chap1.pdf') }}">télécharger le chapitre entier</a>.</p>
                         <h3>L’outil de manipulation de texte rêvé</h3>
                         <p>Une fois que vous pouvez utiliser Vim « normalement » grâce au
                         chapitre précédent, nous voyons ici comment en tirer pleinement partie.
@@ -499,7 +499,7 @@
                         <p>Nous finissons par fournir un ensemble de raccourcis claviers utiles
                         et/ou indispensables pour maitriser l’édition de texte au clavier.</p>
                         <h2>Télécharger un extrait du livre</h2>
-                        <p>Afin de mieux vous rendre compte de la teneur du livre, je vous propose de <strong><a href="{{ url_for('static', filename='vim-pour-les-humains-extrait-chap1.pdf') }}">télécharger le premier chapitre en entier</a></strong>.</p>
+                        <p>Afin de mieux vous rendre compte de la teneur du livre, je vous propose de <strong><a href="{{ url_for('static', filename=g.current_lang + '-vim-extract-chap1.pdf') }}">télécharger le premier chapitre en entier</a></strong>.</p>
                         <h2>Se procurer le livre</h2>
                         <p>C’est bien beau tout ça, mais maintenant il va falloir passer à l’action ! Alors au boulot, <a href="{{ url_for('download') }}">téléchargez le livre !</a>                        <p><a href="{{ url_for('download') }}"><img src="{{ url_for('static', filename='img/cover.png') }}" alt="cover" class="aligncenter size-full wp-image-54" height="734" width="570"></a></p>
 
