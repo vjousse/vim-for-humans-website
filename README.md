@@ -4,8 +4,8 @@ First, be sure to sign up for a [Stripe account](https://stripe.com/) (the payme
 
 In this readme, I'm using 2 sample keys:
 
-        PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC 
-        SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT
+    PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC 
+    SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT
 
 ## Pip / python env
 
