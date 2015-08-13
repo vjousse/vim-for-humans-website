@@ -1,5 +1,12 @@
 # Installation
 
+First, be sure to sign up for a [Stripe account](https://stripe.com/) (the payment platform) and go to the [API page](https://dashboard.stripe.com/account/apikeys) to get your keys.
+
+In this readme, I'm using 2 sample keys:
+
+        PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC 
+        SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT
+
 ## Pip / python env
 
     pip install virtualenv
@@ -31,12 +38,14 @@
 
 ## Run
 
+Depending on the keys, it will run in production/test mode for stripe.
+
     PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT python app.py
 
 
 # Supervisor
 
-Off course, you need to replace the test keys by the live one.
+Of course, you need to replace the test keys by the live one.
 
     [program:vimebook]
     environment = PUBLISHABLE_KEY="pk_test_4aZnwTrOtTfNSxs8KtI1a3LC",SECRET_KEY="sk_test_4aZnq9QgKUcJ2cPp9dGaidOT"
