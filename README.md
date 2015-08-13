@@ -68,3 +68,4 @@ Supervisorctl commands:
 - http://www.jeffknupp.com/blog/2014/01/18/python-and-flask-are-ridiculously-powerful/
 - http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n
 - https://www.safaribooksonline.com/blog/2013/11/27/flask-internationalization-and-localization/
+- http://damyanon.net/
