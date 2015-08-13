@@ -291,7 +291,7 @@
 
                                     <script src="https://checkout.stripe.com/checkout.js"></script>
 
-                                    <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                                    <form method="POST" action="{{ url_for('charge', lang_code=g.current_lang) }}" id="stripeform">
 
                                         <div class="col-md-2 col-xs-3 nopadding">
                                             <input class="sm-form-control" type="number" name="amount" id="amount" value="9.99" min="0" step="any" placeholder="Amount in €"/>
@@ -372,7 +372,7 @@
                                 <strong>{{ _('Paypal account:') }}</strong> contact@vimebook.com
                                 </p>
 
-                                <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                                <form method="POST" action="{{ url_for('charge', lang_code=g.current_lang) }}" id="stripeform">
                                     <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="{{ _('Get the ebook') }}"></input>
 
                                 <input type="hidden" name="amount" value="0" />
@@ -384,7 +384,7 @@
                                     <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://vimebook.com/download"></a>
                                 </p>
 
-                                <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                                <form method="POST" action="{{ url_for('charge', lang_code=g.current_lang) }}" id="stripeform">
                                 <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="{{ _('Get the ebook') }}"></input>
 
                                 <input type="hidden" name="amount" value="0" />
@@ -396,7 +396,7 @@
                                 <strong>{{ _('Send your bitcoins to:') }}</strong> 1Ngx95Fk1YFPX5PhBwxPHXErrd5nPE9iFG
                                 </p>
 
-                                <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                                <form method="POST" action="{{ url_for('charge', lang_code=g.current_lang) }}" id="stripeform">
                                 <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="{{ _('Get the ebook') }}"></input>
 
                                 <input type="hidden" name="amount" value="0" />
@@ -409,7 +409,7 @@
                                 </p>
 
 
-                                <form method="POST" action="{{ url_for('charge') }}" id="stripeform">
+                                <form method="POST" action="{{ url_for('charge', lang_code=g.current_lang) }}" id="stripeform">
                                 <input type="submit" class="button button-3d button-red button-xlarge nobottommargin noleftmargin" value="{{ _('Get the ebook') }}"></input>
 
                                 <input type="hidden" name="amount" value="0" />
@@ -429,91 +429,5 @@
 
         </section><!-- #content end -->
 
-
-{# Old Content #}
-{#
-        <div class="row">
-            <div class="span12">
-                <div class="featured-bar">
-                    <p class="hero-p">Découvrez le moyen le plus rapide et le plus sûr d'apprendre Vim tout en restant productif.<br>Ce livre est <strong>payant, mais le <a href="http://ploum.net/le-prix-libre-une-impossible-utopie/">prix est libre</a></strong>. Il est diffusé sous licence libre <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="{{ url_for('static', filename='img/cc88x31.png' ) }}" /></a> et 20% des gains sont redistribués à l'association de promotion du libre : <a href="http://www.framasoft.net/">Framasoft</a>.<br/><a href="{{ url_for('download') }}">Téléchargez l'ebook (PDF/epub/mobi) « Vim pour les humains »</a> !</p>
-                </div>
-            </div>
-        </div><!-- end .row -->
-
-        <div class="row">
-            <div class="span12">
-                <div id="main_content" role="main">
-
-                    <h2 class="page-title">Apprenez Vim intelligemment</h2>
-                    <p>Je suis convaincu que Vim ne devrait pas être
-                    réservé à une élite qui aime que la première marche d’un apprentissage
-                    soit difficile à franchir. L’idée de <strong>« Vim pour les humains »</strong> est de vous proposer <strong>une méthode pour apprivoiser Vim en douceur, sans devoir perdre toute votre productivité</strong> pendant deux semaines.</p>
-                    <p>Après avoir lu « Vim pour les humains » vous serez en mesure de :</p>
-                    <ul>
-                        <li><strong>Travailler efficacement</strong> au quotidien avec Vim sans changer vos habitudes.</li>
-                        <li><strong>Apprendre petit à petit</strong> les particularités de Vim, sans devoir tout apprendre d’un coup.</li>
-                        <li>Utiliser une <strong>sélection des meilleurs plugins</strong> exploiter toute la puissance de Vim.</li>
-                        <li>Jour après jour, <strong>augmenter votre efficacité</strong> à saisir du texte.</li>
-                    </ul>
-                    <h2>Un Vim moderne</h2>
-                    <p>Comme le montre la capture d’écran ci-dessous, vous disposerez d’un
-                    Vim moderne qui n’a rien à envier aux meilleurs éditeurs de texte à la
-                    mode.</p>
-                    <div id="attachment_34" style="width: 1011px" class="wp-caption aligncenter"><img src="{{ url_for('static', filename='img/macvim-nerdtree.png') }}" alt="macvim" class="size-full wp-image-34" height="567" width="1001"><p class="wp-caption-text">Un Vim moderne</p></div>
-                    <h2>Structure du livre</h2>
-                    <p>Petit préambule : ce n’est <strong>pas un livre pour les experts ou les barbus de Vim</strong>.
-                    Ce livre s’adresse aux novices de Vim désirant bénéficier d’un moyen
-                    pour ne pas l’abandonner au bout de deux jours. Le but est de vous
-                    mettre le pied à l’étrier et de vous permettre de <strong>franchir la première marche sans perdre toute votre productivité</strong>.
-                    Libre à vous ensuite d’utiliser toutes les ressources disponibles sur
-                    internet pour maitriser les subtilités les plus obscures de Vim.</p>
-                    <p>Les principales ressources en question étant :</p>
-                    <ul>
-                        <li><a href="http://www.amazon.fr/gp/product/1934356980/ref=as_li_ss_tl?ie=UTF8&amp;camp=1642&amp;creative=19458&amp;creativeASIN=1934356980&amp;linkCode=as2&amp;tag=vincjous-21">Practical Vim: Edit Text at the Speed of Thought</a></li>
-                        <li><a href="http://www.amazon.fr/gp/product/059652983X/ref=as_li_ss_tl?ie=UTF8&amp;camp=1642&amp;creative=19458&amp;creativeASIN=059652983X&amp;linkCode=as2&amp;tag=vincjous-21">Learning the vi and Vim Editors</a></li>
-                        <li><a href="http://swaroopch.com/notes/Vim_fr/">A byte of Vim</a></li><a href="http://swaroopch.com/notes/Vim_fr/">
-                        </a><li><a href="http://swaroopch.com/notes/Vim_fr/"></a><a href="http://vimbits.com/">Vim bits</a>
-                        </li></ul>
-                        <p>Tout ce que je vous propose ici est <strong>de gagner du temps</strong> en sélectionnant la méthode qui marche le mieux selon moi et en vous <strong>facilitant l’apprentissage de la bête</strong>. <strong>Le tout en français</strong> évidemment.</p>
-                        <p>Voici un petit résumé des différents chapitres :</p>
-                        <h3>Introduction</h3>
-                        <p>Petit tour d’horizon des avantages de vim et de pourquoi c’est un des
-                        meilleurs investissements que vous pouvez réaliser dans votre carrière.</p>
-                        <h3>Rendre Vim utilisable</h3>
-                        <p>Nous voyons ici comment configurer Vim pour qu’il soit utilisable par
-                        un humain « normal ». Coloration syntaxique, explorateur de fichiers
-                        (The NERD Tree), thème de couleurs (Solarized), utilisation de la
-                        souris, … Nous abordons aussi pourquoi il sera important de se passer de
-                        la souris pour la santé de vos mains/doigts. Vous pouvez d'ailleurs directement <a href="{{ url_for('static', filename=g.current_lang + '-vim-extract-chap1.pdf') }}">télécharger le chapitre entier</a>.</p>
-                        <h3>L’outil de manipulation de texte rêvé</h3>
-                        <p>Une fois que vous pouvez utiliser Vim « normalement » grâce au
-                        chapitre précédent, nous voyons ici comment en tirer pleinement partie.
-                        Nous introduisons les raccourcis claviers ainsi que les modes. Nous
-                        commençons petit à petit par nous passer de la souris.</p>
-                        <h3>Les plugins indispensables</h3>
-                        <p>Dans ce chapitre, nous faisons passer Vim au niveau supérieur. Nous
-                        lui ajoutons des plugins tels que Lusty Explorer (explorateur de
-                        fichiers au clavier), Ack (recherche dans les fichiers) ou encore Ctrl-p
-                        (recherche / ouverture rapide de fichiers).</p>
-                        <h3>Pense-bête et exemples</h3>
-                        <p>Nous finissons par fournir un ensemble de raccourcis claviers utiles
-                        et/ou indispensables pour maitriser l’édition de texte au clavier.</p>
-                        <h2>Télécharger un extrait du livre</h2>
-                        <p>Afin de mieux vous rendre compte de la teneur du livre, je vous propose de <strong><a href="{{ url_for('static', filename=g.current_lang + '-vim-extract-chap1.pdf') }}">télécharger le premier chapitre en entier</a></strong>.</p>
-                        <h2>Se procurer le livre</h2>
-                        <p>C’est bien beau tout ça, mais maintenant il va falloir passer à l’action ! Alors au boulot, <a href="{{ url_for('download') }}">téléchargez le livre !</a>                        <p><a href="{{ url_for('download') }}"><img src="{{ url_for('static', filename='img/cover.png') }}" alt="cover" class="aligncenter size-full wp-image-54" height="734" width="570"></a></p>
-
-                </div><!-- end #main_content -->
-            </div><!-- end .span12 -->
-        </div><!-- end .row -->
-        <div class="row">
-            <div class="span12">
-                <div class="featured-bar">
-                    <p class="hero-p">Découvrez le moyen le plus rapide et le plus sûr d'apprendre Vim tout en restant productif.<br>Ce livre est <strong>payant, mais le <a href="http://ploum.net/le-prix-libre-une-impossible-utopie/">prix est libre</a></strong>. Il est diffusé sous licence libre <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="{{ url_for('static', filename='img/cc88x31.png' ) }}" /></a> et 20% des gains sont redistribués à l'association de promotion du libre : <a href="http://www.framasoft.net/">Framasoft</a>.<br/><a href="{{ url_for('download') }}">Téléchargez l'ebook (PDF/epub/mobi) « Vim pour les humains »</a> !</p>
-
-                </div>
-            </div>
-        </div><!-- end .row -->
-        #}
 
 {% endblock %}

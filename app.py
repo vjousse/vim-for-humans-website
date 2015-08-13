@@ -97,7 +97,7 @@ def confirm_free(download_uuid):
     download = Download.query.get(download_uuid)
     return render_template('confirm-free.html', uuid=download_uuid)
 
-@app.route('/charge', methods=['POST'])
+@app.route('/<lang_code>/charge', methods=['POST'])
 def charge():
 
     # Amount in cents
@@ -122,7 +122,8 @@ def charge():
         download = Download(
                 uuid=download_uuid,
                 email=request.form['email'],
-                price=amount)
+                price=amount,
+                lang=g.get('current_lang'))
 
         db.session.add(download)
         db.session.commit()
@@ -130,7 +131,8 @@ def charge():
 
     else:
 
-        download = Download(uuid=download_uuid)
+        download = Download(uuid=download_uuid,
+                lang=g.get('current_lang'))
         db.session.add(download)
         db.session.commit()
         return redirect(url_for('confirm_free', download_uuid=download_uuid, lang_code=g.get('current_lang', 'fr')))
@@ -142,6 +144,7 @@ class Download(db.Model):
     email = db.Column(db.String)
     price = db.Column(db.Float, default=0)
     count = db.Column(db.Integer, default=0)
+    lang = db.Column(db.String, default='fr')
     #: Timestamp for when this instance was created, in UTC
     created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
     #: Timestamp for when this instance was last updated (via the app), in UTC
