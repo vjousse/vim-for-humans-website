@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-13 09:39+0200\n"
+"POT-Creation-Date: 2015-09-14 14:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 
 #: templates/confirm-free.html:5
 msgid ""
-"Thanks for downloading \"Vim for humans!\"! Don't forget to contribute "
+"Thanks for downloading \"Vim for humans\"! Don't forget to contribute "
 "with one of the following way:"
 msgstr ""
 
@@ -142,7 +142,7 @@ msgid ""
 msgstr ""
 
 #: templates/index.html:72
-msgid "Pugin selection"
+msgid "Plugin selection"
 msgstr ""
 
 #: templates/index.html:73
