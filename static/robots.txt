@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: /confirm/
 Disallow: /confirm-other/
+Disallow: /fr/download/
+Disallow: /en/download/
