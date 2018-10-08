@@ -1,7 +1,7 @@
 import os, uuid
 from flask import Flask, render_template, request, url_for, redirect, send_from_directory, g, abort
-from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.babel import Babel, gettext
+from flask_sqlalchemy import SQLAlchemy
+from flask_babel import Babel, gettext
 from sqlalchemy import func 
 from datetime import datetime
 from functools import reduce
