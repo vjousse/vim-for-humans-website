@@ -289,8 +289,6 @@
                             <div id="payment-euros" class="payment-method">
                                 <div class="col_half">
 
-                                    <script src="https://checkout.stripe.com/checkout.js"></script>
-
                                     <form method="POST" action="{{ url_for('charge', lang_code=g.current_lang) }}" id="stripeform">
 
                                         <div class="col-md-2 col-xs-3 nopadding">
@@ -337,33 +335,6 @@
                                     </div>
                                     <h4 class="center">{{ _('Repartition for 10€') }}</h4>
                                 </div>
-
-            <script>
-            var handler = StripeCheckout.configure({
-                key: '{{ key }}',
-                token: function(token) {
-                    var $input = $('<input type=hidden name=stripeToken />').val(token.id);
-                    var $inputEmail = $('<input type=hidden name=email />').val(token.email);
-                    $('#stripeform').append($input).append($inputEmail).submit();
-                }
-            });
-
-            document.getElementById('button-stripe').addEventListener('click', function(e) {
-                // Open Checkout with further options
-                var amount = parseFloat(document.getElementById('amount').value)*100;
-                console.log(amount);
-                if(amount > 0) {
-                    handler.open({
-                        name: 'Vimebook',
-                        description: 'Vim pour les humains',
-                        amount: amount,
-                        currency: 'EUR',
-                        allowRememberMe: false
-                    });
-                    e.preventDefault();
-                }
-            });
-            </script>
 
                             </div>
 
