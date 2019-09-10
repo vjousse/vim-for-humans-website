@@ -55,7 +55,10 @@ def index():
             .one()
 
     framasoft_amount = "{:.2f}".format(total_donation * 0.20)
-    average_donation = total_donation / donation_number
+
+    average_donation = 0
+    if not donation_number == 0:
+        average_donation = total_donation / donation_number
 
     return render_template('index.html', \
             key=STRIPE_KEYS['publishable_key'], \
