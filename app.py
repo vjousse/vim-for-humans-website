@@ -117,26 +117,35 @@ def confirm_free(download_uuid):
     return render_template('confirm-free.html', uuid=download_uuid)
 
 
+@app.route('/<lang_code>/cancel')
+def cancel():
+    return render_template('cancel.html')
+
+
 @app.route('/<lang_code>/charge', methods=['POST'])
 def charge():
 
     # Amount in cents
     amount = float(request.form['amount'])
-    amountInCents = int(amount*100)
-
     download_uuid = str(uuid.uuid4())
 
     if(amount != 0.0):
-        customer = stripe.Customer.create(
-            email=request.form['email'],
-            card=request.form['stripeToken']
-        )
 
-        stripe.Charge.create(
-            customer=customer.id,
-            amount=amountInCents,
-            currency='eur',
-            description='Vim pour les humains'
+        stripe.checkout.Session.create(
+          payment_method_types=['card'],
+          line_items=[{
+            'name': 'Vim for humans',
+            'amount': amount,
+            'currency': 'eur',
+            'quantity': 1,
+          }],
+          success_url=url_for(
+            'confirm',
+            download_uuid=download_uuid,
+            lang_code=g.get('current_lang', 'fr')),
+          cancel_url=url_for(
+            'cancel',
+            lang_code=g.get('current_lang', 'fr'))
         )
 
         download = Download(

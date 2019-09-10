@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Content
+============================================= -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
+                {% block text %}{% endblock %}
+
+        </div>
+    </div>
+
+</section><!-- #content end -->
+
+{% endblock %}
+
+{% block menu_top %}
+
+<li><a href="{{ url_for('index', lang_code=g.current_lang) }}" data-href="#section-content"><div>{{ _('Back to the website') }}</div></a></li>
+    {% if g.current_lang != 'en' %}
+    <li><a href="{{ url_for(request.url_rule.endpoint, lang_code='en', download_uuid=uuid ) }}"><div><span class="flag-icon flag-icon-gb" style="display:inline-block"></span></div></a></li>
+    {% endif %}
+    {% if g.current_lang != 'fr' %}
+    <li><a href="{{ url_for(request.url_rule.endpoint, lang_code='fr', download_uuid=uuid ) }}"><div><span class="flag-icon flag-icon-fr" style="display:inline-block"></span></div></a></li>
+    {% endif %}
+
+{% endblock %}
+
+
+{% block menu_bottom %}
+
+<a href="{{ url_for('root') }}"><div>{{ _('Back to the website') }}</a>
+
+{% endblock %}
+
