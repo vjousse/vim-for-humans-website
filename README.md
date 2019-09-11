@@ -40,7 +40,7 @@ In this readme, I'm using 2 sample keys:
 
 Depending on the keys, it will run in production/test mode for stripe.
 
-    PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT python app.py
+    ENDPOINT_SECRET="whsec_AjrfPgBKPZhCnU5grqtuhDnXU5OYA9zf" PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT python app.py
 
 
 # Supervisor
@@ -48,7 +48,7 @@ Depending on the keys, it will run in production/test mode for stripe.
 Of course, you need to replace the test keys by the live one.
 
     [program:vimebook]
-    environment = PUBLISHABLE_KEY="pk_test_4aZnwTrOtTfNSxs8KtI1a3LC",SECRET_KEY="sk_test_4aZnq9QgKUcJ2cPp9dGaidOT"
+    environment = PUBLISHABLE_KEY="pk_test_4aZnwTrOtTfNSxs8KtI1a3LC",SECRET_KEY="sk_test_4aZnq9QgKUcJ2cPp9dGaidOT",ENDPOINT_SECRET="whsec_AjrfPgBKPZhCnU5grqtuhDnXU5OYA9zf"
     command = /home/vimebook/python/vim-for-humans-website/gunicorn_start.sh ; Command to start app
     user = vimebook ; User to run as
     stdout_logfile = /home/vimebook/python/vim-for-humans-website/log/gunicorn_supervisor.log ; Where to write log messages
