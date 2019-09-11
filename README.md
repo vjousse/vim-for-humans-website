@@ -2,10 +2,11 @@
 
 First, be sure to sign up for a [Stripe account](https://stripe.com/) (the payment platform) and go to the [API page](https://dashboard.stripe.com/account/apikeys) to get your keys.
 
-In this readme, I'm using 2 sample keys:
+In this readme, I'm using 3 sample keys:
 
-    PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC 
+    PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC
     SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT
+    ENDPOINT_SECRET=whsec_AjrfPgBKPZhCnU5grqtuhDnXU5OYA9zf
 
 ## Pip / python env
 
