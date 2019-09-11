@@ -111,8 +111,13 @@ def confirm(download_uuid):
 
     download = Download.query.get(download_uuid)
 
+    amount = None
+
+    if download:
+        amount = download.price
+
     return render_template(
-        'confirm.html', amount=download.price, uuid=download_uuid)
+        'confirm.html', amount=amount, uuid=download_uuid)
 
 
 @app.route('/<lang_code>/confirm-other/<download_uuid>')
