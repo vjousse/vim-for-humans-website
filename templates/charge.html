@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="{{ g.current_lang }}">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Vincent Jousse" />
+    <meta property="og:title" content="{{ _('Vim for humans') }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url_for('index', lang_code=g.current_lang) }}" />
+    <meta property="og:image" content="{{ url_for('static', filename='images/' + g.current_lang + '-screenshot.png') }}" />
+    <title>{{ _('Vim for humans | Free price ebook') }}</title>
+
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script type="text/javascript">
+    /* <![CDATA[ */
+      var stripe = Stripe('{{ key }}');
+
+        stripe.redirectToCheckout({
+          // Make the id field from the Checkout Session creation API response
+          // available to this file, so you can provide it as parameter here
+          // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+          sessionId: '{{ checkout_session_id }}'
+        }).then(function (result) {
+          // If `redirectToCheckout` fails due to a browser or network
+          // error, display the localized error message to your customer
+          // using `result.error.message`.
+        });
+    /* ]]> */</script>
+
+</head>
+
+<body>Loading Stripe…</body>
+
+</html>

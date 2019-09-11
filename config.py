@@ -9,7 +9,8 @@ LANGUAGES = {
 
 STRIPE_KEYS = {
     'secret_key': os.environ['SECRET_KEY'],
-    'publishable_key': os.environ['PUBLISHABLE_KEY']
+    'publishable_key': os.environ['PUBLISHABLE_KEY'],
+    'endpoint_secret': os.environ['ENDPOINT_SECRET']
 }
 
 
