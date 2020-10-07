@@ -17,7 +17,7 @@ In this readme, I'm using 3 sample keys:
 
 ## Create db
 
-    PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT python
+    PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT ENDPOINT_SECRET=whsec_AjrfPgBKPZhCnU5grqtuhDnXU5OYA9zf python
     from app import db
     db.create_all()
 
