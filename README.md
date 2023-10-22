@@ -18,7 +18,8 @@ In this readme, I'm using 3 sample keys:
 ## Create db
 
     PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT ENDPOINT_SECRET=whsec_AjrfPgBKPZhCnU5grqtuhDnXU5OYA9zf python
-    from app import db
+    from app import db,app
+    app.app_context().push()
     db.create_all()
 
 ## Translations
@@ -35,14 +36,11 @@ In this readme, I'm using 3 sample keys:
 
     pybabel compile -d translations
 
-
-
 ## Run
 
 Depending on the keys, it will run in production/test mode for stripe.
 
     ENDPOINT_SECRET="whsec_AjrfPgBKPZhCnU5grqtuhDnXU5OYA9zf" PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT python app.py
-
 
 # Supervisor
 
@@ -55,13 +53,10 @@ Of course, you need to replace the test keys by the live one.
     stdout_logfile = /home/vimebook/python/vim-for-humans-website/log/gunicorn_supervisor.log ; Where to write log messages
     redirect_stderr = true ; Save stderr in the same log
 
-
-
 Supervisorctl commands:
 
     supervisorctl reread
     supervisorctl update
-
 
 # Good reads
 
