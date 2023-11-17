@@ -124,12 +124,20 @@ def confirm(download_uuid):
     if download:
         amount = download.price
 
-    return render_template("confirm.html", amount=amount, uuid=download_uuid)
+    new = False
+
+    return render_template(
+        "confirm.html",
+        amount=amount,
+        uuid=download_uuid,
+        known_email=download.email,
+        new=new,
+    )
 
 
 @app.route("/<lang_code>/confirm-other/<download_uuid>")
 def confirm_free(download_uuid):
-    return render_template("confirm-free.html", uuid=download_uuid)
+    return render_template("confirm-other.html", uuid=download_uuid)
 
 
 @app.route("/<lang_code>/cancel")
@@ -139,33 +147,33 @@ def cancel():
 
 @app.route("/stripe_webhook", methods=["POST"])
 def stripe_webhook():
-    payload = request.data
+    payload = request.data.decode("utf-8")
+    received_sig = request.headers.get("Stripe-Signature", None)
 
-    sig_header = request.headers.get("STRIPE_SIGNATURE")
     event = None
+
     try:
-        event = stripe.Webhook.construct_event(payload, sig_header, endpoint_secret)
+        event = stripe.Webhook.construct_event(payload, received_sig, endpoint_secret)
     except ValueError as e:
+        print("Error while decoding event!")
         print(e)
-        # Invalid payload
-        abort(400)
+        return "Bad payload", 400
     except stripe.error.SignatureVerificationError as e:
+        print("Invalid signature!")
+
         print(e)
-        # Invalid signature
-        abort(400)
+        return "Bad signature", 400
 
     # Handle the checkout.session.completed event
     if event["type"] == "checkout.session.completed":
         session = event["data"]["object"]
 
-        # Fulfill the purchase...
-        # handle_checkout_session(session)
         print(session)
 
         download = Download(
             uuid=session["client_reference_id"],
-            email=session["customer_email"],
-            price=session["display_items"][0]["amount"] / 100,
+            email=session["customer_details"]["email"],
+            price=session["amount_total"] / 100,
             lang=g.get("current_lang"),
         )
 
@@ -182,20 +190,23 @@ def charge():
     amountInCents = int(amount * 100)
     download_uuid = str(uuid.uuid4())
 
-    print(url_for("cancel", lang_code=g.get("current_lang", "fr")))
-
     if amount != 0.0:
         session = stripe.checkout.Session.create(
             client_reference_id=download_uuid,
             payment_method_types=["card"],
             line_items=[
                 {
-                    "name": "Vim for humans",
-                    "amount": amountInCents,
-                    "currency": "eur",
                     "quantity": 1,
+                    "price_data": {
+                        "unit_amount": amountInCents,
+                        "currency": "eur",
+                        "product_data": {
+                            "name": "Vim for humans",
+                        },
+                    },
                 }
             ],
+            mode="payment",
             success_url=url_for(
                 "confirm",
                 download_uuid=download_uuid,
@@ -228,6 +239,25 @@ def charge():
         )
 
 
+@app.route("/<lang_code>/subscribe/<download_uuid>", methods=["POST"])
+def subscribe_with_download(download_uuid):
+    email = request.values["email"]
+    email_number = Email.query.filter_by(email=email).count()
+
+    new = False
+    if email_number == 0:
+        # Save subscription
+        emailObject = Email(email=email, download_id=download_uuid)
+
+        db.session.add(emailObject)
+        db.session.commit()
+        new = True
+
+    return render_template(
+        "confirm-other.html", email=email, uuid=download_uuid, new=new
+    )
+
+
 class Download(db.Model):
     __tablename__ = "download"
     uuid = db.Column(db.String, primary_key=True)
@@ -235,6 +265,19 @@ class Download(db.Model):
     price = db.Column(db.Float, default=0)
     count = db.Column(db.Integer, default=0)
     lang = db.Column(db.String, default="fr")
+    #: Timestamp for when this instance was created, in UTC
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    #: Timestamp for when this instance was last updated (via the app), in UTC
+    updated_at = db.Column(
+        db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False
+    )
+
+
+class Email(db.Model):
+    __tablename__ = "email"
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String)
+    download_id = db.Column(db.String, db.ForeignKey("download.uuid"), nullable=True)
     #: Timestamp for when this instance was created, in UTC
     created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
     #: Timestamp for when this instance was last updated (via the app), in UTC

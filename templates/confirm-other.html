@@ -1,0 +1,15 @@
+{% extends "confirm-layout.html" %}
+{% block text %}
+
+<h2 class="page-title">{{ _('Thank you!') }}</h2>
+<p>{{ _("Thanks for downloading \"Vim for humans\"! Don't forget to contribute with one of the following way if you can:") }}</p>
+
+
+<div style="padding-left: 15px;">
+    <ul>
+      <li>{{ _('A little thank you by mail:') }} <a href="mailto:vincent@jousse.org">vincent@jousse.org</a></li>
+      <li>{{ _('Something else?') }}</li>
+    </ul>
+</div>
+
+{% endblock %}

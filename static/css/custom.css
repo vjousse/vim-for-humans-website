@@ -1,31 +1,33 @@
 input[type="radio"][name="payment"] {
-    display:none;
+  display: none;
 }
 input[type="radio"][name="payment"]:checked + label i {
-    color: #C02942;
+  color: #c02942;
 }
 
-
 input[type="radio"][name="payment"]:checked + label div.feature-box {
-    border-bottom-color: black;
-    border-bottom-left-radius:0;
-    border-bottom-right-radius:0;
+  border-bottom-color: black;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 input[id="p-euros"]:checked ~ #payment-euros,
 input[id="p-paypal"]:checked ~ #payment-paypal,
 input[id="p-flattr"]:checked ~ #payment-flattr,
 input[id="p-bitcoins"]:checked ~ #payment-bitcoins,
-input[id="p-mail"]:checked ~ #payment-mail
-{
-    display: block;
+input[id="p-mail"]:checked ~ #payment-mail {
+  display: block;
 }
 
 .payment-method {
-    display: none;
-    padding-bottom: 20px;
+  display: none;
+  padding-bottom: 20px;
 }
 
 .payment-method > p {
-    height: 30px;
+  height: 30px;
+}
+
+.form-subscribe {
+  padding-top: 2rem;
 }
