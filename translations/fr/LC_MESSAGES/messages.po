@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-11-17 17:49+0100\n"
+"POT-Creation-Date: 2023-11-17 18:06+0100\n"
 "PO-Revision-Date: 2015-06-15 15:24+0200\n"
 "Last-Translator: Vincent Jousse <vincent@jousse.org>\n"
 "Language: fr\n"
@@ -86,15 +86,17 @@ msgid ""
 "No new subscription registered, you were already subscribed with this "
 "email:"
 msgstr ""
-"Aucune nouvelle inscription réalisée, vous étiez déjà inscript avec l'email suivant :"
+"Aucune nouvelle inscription réalisée, vous étiez déjà inscript avec "
+"l'email suivant :"
 
 #: templates/confirm-layout.html:37
 msgid ""
 "You can provide your email if you want to stay in touch about Vimebook. "
 "Of course, I will never share your email with anyone else."
 msgstr ""
-"Vous pouvez me laisser votre email ci-dessous si vous voulez être tenu au courant des évolutions de Vim pour les humains. "
-"Il va de soit que je ne partagerai pas votre email avec qui que ce soit."
+"Vous pouvez me laisser votre email ci-dessous si vous voulez être tenu au"
+" courant des évolutions de Vim pour les humains. Il va de soit que je ne "
+"partagerai pas votre email avec qui que ce soit."
 
 #: templates/confirm-layout.html:53
 msgid "Subscribe"
@@ -105,7 +107,8 @@ msgid ""
 "(clicking on the subscribe button will open a new page and will not close"
 " this one)"
 msgstr ""
-"(cliquer sur le bouton s'inscrire ouvrira une nouvelle pas et ne fermera pas celle-ci)"
+"(cliquer sur le bouton s'inscrire ouvrira une nouvelle pas et ne fermera "
+"pas celle-ci)"
 
 #: templates/confirm-other.html:4 templates/confirm-subscribe.html:3
 #: templates/confirm.html:4
@@ -263,13 +266,11 @@ msgstr "Prix libre"
 
 #: templates/index.html:106
 msgid ""
-"You're free to pay whatever you want. Money, <a "
-"href=\"https://flattr.com/profile/vjousse\">Flattr</a>, email or a thank "
-"you are fine. More <a href=\"https://ploum.net/the-disruptive-free-"
-"price/\">about free price here</a>."
+"You're free to pay whatever you want. Money, email or a thank you are "
+"fine. More <a href=\"https://ploum.net/the-disruptive-free-price/\">about"
+" free price here</a>."
 msgstr ""
-"Vous êtes libre de payer le prix que vous voulez. De l' argent, un <a "
-"href=\"https://flattr.com/profile/vjousse\">Flattr</a>, un email ou un "
+"Vous êtes libre de payer le prix que vous voulez. De l' argent, un email ou un "
 "merci feront très bien l'affaire. <a href=\"http://ploum.net/le-prix-"
 "libre-une-impossible-utopie/\">Plus d'infos au sujet du prix libre "
 "ici.</a>"
@@ -388,16 +389,14 @@ msgstr "Est-ce que c'est vraiment gratuit ?"
 msgid ""
 "Free price doesn't mean that it's free. I firmly believe that everybody "
 "has something to give in exchange of this ebook. The difference is just "
-"that I let you fix the price. It can be whatever you want: money, <a "
-"href=\"https://flattr.com/profile/vjousse\">Flattr</a>, email or a thank "
-"you are fine. More <a href=\"https://ploum.net/the-disruptive-free-"
-"price/\">about free price here</a>."
+"that I let you fix the price. It can be whatever you want: money, email "
+"or a thank you are fine. More <a href=\"https://ploum.net/the-disruptive-"
+"free-price/\">about free price here</a>."
 msgstr ""
 "Prix libre ne veux pas dire que c'est gratuit. Je suis convaincu que "
 "chaque personne a quelque chose à apporter en échange de cet ebook. Je "
 "vous laisse donc choisir quoi. Vous êtes libre de payer le prix que vous "
-"voulez. De l' argent, un <a "
-"href=\"https://flattr.com/profile/vjousse\">Flattr</a>, un email ou un "
+"voulez. De l' argent, un email ou un "
 "merci feront très bien l'affaire. <a href=\"http://ploum.net/le-prix-"
 "libre-une-impossible-utopie/\">Plus d'infos au sujet du prix libre "
 "ici.</a>"
@@ -469,47 +468,43 @@ msgstr "À partir de 0€"
 msgid "Old school"
 msgstr "À l'ancienne"
 
-#: templates/index.html:256
-msgid "Flattr my page"
-msgstr "Flattr ma page"
-
-#: templates/index.html:269
+#: templates/index.html:257
 msgid "Share the love"
 msgstr "Un petit merci"
 
-#: templates/index.html:274
+#: templates/index.html:262
 msgid "Make the payment & get your ebook"
 msgstr "Effectuez votre paiement et obtenez votre ebook"
 
-#: templates/index.html:286
+#: templates/index.html:274
 msgid "Contribute and download"
 msgstr "Contribuez et téléchargez"
 
-#: templates/index.html:293
+#: templates/index.html:281
 msgid "Average payment:"
 msgstr "Moyenne des paiements :"
 
-#: templates/index.html:294
+#: templates/index.html:282
 msgid "Downloads:"
 msgstr "Téléchargements :"
 
-#: templates/index.html:295
+#: templates/index.html:283
 msgid "Donations:"
 msgstr "Dons :"
 
-#: templates/index.html:296
+#: templates/index.html:284
 msgid "Minimum payment:"
 msgstr "Paiement minimum :"
 
-#: templates/index.html:296
+#: templates/index.html:284
 msgid "maximum payment:"
 msgstr "paiement maximum :"
 
-#: templates/index.html:297
+#: templates/index.html:285
 msgid "Amount for Framasoft:"
 msgstr "Montant pour Framasoft :"
 
-#: templates/index.html:300
+#: templates/index.html:288
 #, python-format
 msgid ""
 "20%% of the earnings are donated to the <a "
@@ -519,7 +514,7 @@ msgstr ""
 "20%% des gains sont reversés à l'association de promotion du logiciel "
 "libre <a href=\"http://framasoft.net\">Framasoft</a>."
 
-#: templates/index.html:301
+#: templates/index.html:289
 msgid ""
 "The payment platform used is <a "
 "href=\"http://stripe.com\"><strong>Stripe</strong></a>."
@@ -527,31 +522,31 @@ msgstr ""
 "La plateforme de paiement utilisée est <a "
 "href=\"http://stripe.com\"><strong>Stripe</strong></a>."
 
-#: templates/index.html:310
+#: templates/index.html:298
 msgid "Stripe"
 msgstr ""
 
-#: templates/index.html:315
+#: templates/index.html:303
 msgid "Framasoft donation"
 msgstr "Dons Framasoft"
 
-#: templates/index.html:319
+#: templates/index.html:307
 msgid "Remaining"
 msgstr "Reste"
 
-#: templates/index.html:321
+#: templates/index.html:309
 msgid "Repartition for 10€"
 msgstr "Répartition pour 10€"
 
-#: templates/index.html:328
+#: templates/index.html:316
 msgid "Paypal account:"
 msgstr "Compte Paypal :"
 
-#: templates/index.html:332 templates/index.html:344 templates/index.html:357
+#: templates/index.html:320 templates/index.html:332 templates/index.html:345
 msgid "Get the ebook"
 msgstr "Télécharger l'ebook"
 
-#: templates/index.html:352
+#: templates/index.html:340
 msgid ""
 "<strong>Send a thank you to:</strong> <a "
 "href=\"mailto:vincent@jousse.org\">vincent@jousse.org</a>, or on Twitter "
@@ -574,42 +569,3 @@ msgstr ""
 #: templates/layout.html:117
 msgid "Home"
 msgstr "Accueil"
-
-#~ msgid ""
-#~ "Clearly not. This book is for Vim"
-#~ " novices wishing not to quit after"
-#~ " two days. The goal is to help"
-#~ " you take the first step without "
-#~ "loosing all your productivity. Lot of"
-#~ " ressources are available for gurus "
-#~ "like: <a href=\"http://www.swaroopch.com/notes/vim/\">A"
-#~ " byte of vim</a>, <a "
-#~ "href=\"http://www.vimbits.com/\">Vimbits</a>, <a "
-#~ "href=\"http://www.amazon.fr/gp/product/059652983X/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=059652983X&linkCode=as2\">Learning"
-#~ " The Vi and Vim Editors</a> and "
-#~ "<a "
-#~ "href=\"http://www.amazon.fr/gp/product/1934356980/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=1934356980&linkCode=as2\">Practical"
-#~ " Vim</a>."
-#~ msgstr ""
-#~ "Clairement pas. Ce livre s'adresse aux"
-#~ " novices de Vim désirant bénéficier "
-#~ "d'un moyen pour ne pas l’abandonner "
-#~ "au bout de deux jours. Le but "
-#~ "est de vous mettre le pied à "
-#~ "l'étrier et de vous permettre de "
-#~ "franchir la première marche sans perdre"
-#~ " toute votre productivité. Libre à "
-#~ "vous ensuite d'utiliser toutes les "
-#~ "ressources disponibles sur internet pour "
-#~ "maitriser les subtilités les plus "
-#~ "obscures de Vim."
-
-#~ msgid "Hype!"
-#~ msgstr "La classe !"
-
-#~ msgid "Company taxes"
-#~ msgstr "Impôts entreprise"
-
-#~ msgid "Send your bitcoins to:"
-#~ msgstr "Envoyez des bitcoins à cette adresse :"
-
