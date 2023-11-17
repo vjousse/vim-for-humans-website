@@ -247,7 +247,9 @@ def subscribe_with_download(download_uuid):
     new = False
     if email_number == 0:
         # Save subscription
-        emailObject = Email(email=email, download_id=download_uuid)
+        emailObject = Email(
+            email=email, download_id=download_uuid, lang=g.get("current_lang", "fr")
+        )
 
         db.session.add(emailObject)
         db.session.commit()
@@ -277,6 +279,7 @@ class Email(db.Model):
     __tablename__ = "email"
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String)
+    lang = db.Column(db.String, default="fr")
     download_id = db.Column(db.String, db.ForeignKey("download.uuid"), nullable=True)
     #: Timestamp for when this instance was created, in UTC
     created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
