@@ -15,3 +15,8 @@ STRIPE_KEYS = {
 
 
 SQLALCHEMY_DATABASE_URI = 'sqlite:///vimebook.db'
+
+UPDATES = {
+    'fr': '25/05/2024',
+    'en': None
+}

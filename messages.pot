@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-24 10:10+0200\n"
+"POT-Creation-Date: 2024-05-24 11:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgstr ""
 msgid "Vim for humans | Free price ebook"
 msgstr ""
 
-#: templates/confirm-layout.html:16 templates/index.html:214
+#: templates/confirm-layout.html:16 templates/index.html:219
 #: templates/layout.html:80 templates/layout.html:120
 msgid "Download"
 msgstr ""
@@ -143,126 +143,130 @@ msgid ""
 "class=\"color\">@#!?</span>\"</span>"
 msgstr ""
 
-#: templates/index.html:18 templates/index.html:161
+#: templates/index.html:18 templates/index.html:166
 msgid "Download the ebook"
 msgstr ""
 
-#: templates/index.html:25
+#: templates/index.html:22 templates/index.html:225
+msgid "Latest update:"
+msgstr ""
+
+#: templates/index.html:30
 msgid "Learn Vim the smart way"
 msgstr ""
 
-#: templates/index.html:27
+#: templates/index.html:32
 msgid ""
 "I'm convinced that everybody should be able to learn Vim and that it's "
 "just a problem of documentation. With this ebook you will:"
 msgstr ""
 
-#: templates/index.html:32
+#: templates/index.html:37
 msgid "Stay productive while learning Vim"
 msgstr ""
 
-#: templates/index.html:33
+#: templates/index.html:38
 msgid "Get a modern customizable IDE"
 msgstr ""
 
-#: templates/index.html:34
+#: templates/index.html:39
 msgid "Learn why Vim seems so strange"
 msgstr ""
 
-#: templates/index.html:35
+#: templates/index.html:40
 msgid "Get a selection of the best Vim plugins"
 msgstr ""
 
-#: templates/index.html:36
+#: templates/index.html:41
 msgid "Have fun :-)"
 msgstr ""
 
-#: templates/index.html:53 templates/layout.html:78 templates/layout.html:120
+#: templates/index.html:58 templates/layout.html:78 templates/layout.html:120
 msgid "Content"
 msgstr ""
 
-#: templates/index.html:54
+#: templates/index.html:59
 msgid "Yum yum"
 msgstr ""
 
-#: templates/index.html:62
+#: templates/index.html:67
 msgid "Good looking Vim"
 msgstr ""
 
-#: templates/index.html:63
+#: templates/index.html:68
 msgid ""
 "It's not because we are geeks that we should use awful color schemes. Or "
 "should we?"
 msgstr ""
 
-#: templates/index.html:72
+#: templates/index.html:77
 msgid "Plugin selection"
 msgstr ""
 
-#: templates/index.html:73
+#: templates/index.html:78
 msgid ""
 "Using Vim without plugins doesn't make any sense. It's like using a "
 "Smartphone without any app."
 msgstr ""
 
-#: templates/index.html:82
+#: templates/index.html:87
 msgid "Smooth learning curve"
 msgstr ""
 
-#: templates/index.html:83
+#: templates/index.html:88
 msgid ""
 "If you don't quit the first week, you'll be using it for the rest of your"
 " life. It's my bet!"
 msgstr ""
 
-#: templates/index.html:94
+#: templates/index.html:99
 msgid "Creative Commons"
 msgstr ""
 
-#: templates/index.html:95
+#: templates/index.html:100
 msgid ""
 "You are free to do whatever you want (well, almost, see the licence "
 "details <a href=\"http://creativecommons.org/licenses/by/4.0/\">here</a>)"
 " with the ebook."
 msgstr ""
 
-#: templates/index.html:105
+#: templates/index.html:110
 msgid "Free price"
 msgstr ""
 
-#: templates/index.html:106
+#: templates/index.html:111
 msgid ""
 "You're free to pay whatever you want. Money, email or a thank you are "
 "fine. More <a href=\"https://ploum.net/the-disruptive-free-price/\">about"
 " free price here</a>."
 msgstr ""
 
-#: templates/index.html:115
+#: templates/index.html:120
 msgid "Open Source"
 msgstr ""
 
-#: templates/index.html:116
+#: templates/index.html:121
 msgid ""
 "The entire source code is available on my <a "
 "href=\"https://github.com/vjousse/vim-for-humans-book\">Github "
 "profile</a>. Be sure to check it out!"
 msgstr ""
 
-#: templates/index.html:123
+#: templates/index.html:128
 msgid "Introduction"
 msgstr ""
 
-#: templates/index.html:126
+#: templates/index.html:131
 msgid ""
 "A brief overview of the advantages of vim and why it is one of the best "
 "investments you can make in your career."
 msgstr ""
 
-#: templates/index.html:130
+#: templates/index.html:135
 msgid "Usable Vim"
 msgstr ""
 
-#: templates/index.html:133
+#: templates/index.html:138
 #, python-format
 msgid ""
 "In this chapter we see how to configure Vim to make it usable by a "
@@ -273,11 +277,11 @@ msgid ""
 "chapter</a>."
 msgstr ""
 
-#: templates/index.html:138
+#: templates/index.html:143
 msgid "The text editor you've always dreamed of"
 msgstr ""
 
-#: templates/index.html:141
+#: templates/index.html:146
 msgid ""
 "Once you will be able to use Vim \"normally\" thanks to the previous "
 "chapter, we will see here how to take full advantage of Vim. We introduce"
@@ -285,48 +289,48 @@ msgid ""
 " the mouse."
 msgstr ""
 
-#: templates/index.html:145
+#: templates/index.html:150
 msgid "Essential plugins"
 msgstr ""
 
-#: templates/index.html:148
+#: templates/index.html:153
 msgid ""
 "In this chapter, we put Vim to the next level. We add plugins such as "
 "Lusty Explorer (file explorer using the keyboard), Ack (file search) or "
 "Ctrl-p (fast searching/opening of files)."
 msgstr ""
 
-#: templates/index.html:152
+#: templates/index.html:157
 msgid "Cheatsheet & examples"
 msgstr ""
 
-#: templates/index.html:155
+#: templates/index.html:160
 msgid ""
 "We finally provide a set of useful/essential shortcuts to master keyboard"
 " text editing."
 msgstr ""
 
-#: templates/index.html:161
+#: templates/index.html:166
 msgid "Download the first chapter!"
 msgstr ""
 
-#: templates/index.html:161
+#: templates/index.html:166
 msgid "OR"
 msgstr ""
 
-#: templates/index.html:171
+#: templates/index.html:176
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: templates/index.html:172
+#: templates/index.html:177
 msgid "Would this site be serious without a FAQ?"
 msgstr ""
 
-#: templates/index.html:177
+#: templates/index.html:182
 msgid "Is it really free?"
 msgstr ""
 
-#: templates/index.html:178
+#: templates/index.html:183
 msgid ""
 "Free price doesn't mean that it's free. I firmly believe that everybody "
 "has something to give in exchange of this ebook. The difference is just "
@@ -335,23 +339,23 @@ msgid ""
 "free-price/\">about free price here</a>."
 msgstr ""
 
-#: templates/index.html:182
+#: templates/index.html:187
 msgid "Can I get a preview of the content?"
 msgstr ""
 
-#: templates/index.html:183
+#: templates/index.html:188
 msgid "Sure, you can even"
 msgstr ""
 
-#: templates/index.html:183
+#: templates/index.html:188
 msgid "download the first chapter"
 msgstr ""
 
-#: templates/index.html:190
+#: templates/index.html:195
 msgid "Is this ebook suited for Vim experts?"
 msgstr ""
 
-#: templates/index.html:192
+#: templates/index.html:197
 msgid ""
 "Clearly not. This book is for Vim novices wishing not to quit after two "
 "days. The goal is to help you take the first step without losing all your"
@@ -364,75 +368,75 @@ msgid ""
 " Vim</a>."
 msgstr ""
 
-#: templates/index.html:197
+#: templates/index.html:202
 msgid "Can I thank you and share the love?"
 msgstr ""
 
-#: templates/index.html:198
+#: templates/index.html:203
 msgid "The ebook is published under the CC licence"
 msgstr ""
 
-#: templates/index.html:199
+#: templates/index.html:204
 msgid "So you can share it as you want!"
 msgstr ""
 
-#: templates/index.html:215
+#: templates/index.html:222
 msgid "Here we are! Well, almost."
 msgstr ""
 
-#: templates/index.html:218
+#: templates/index.html:229
 msgid "Choose your free price payment method"
 msgstr ""
 
-#: templates/index.html:232
+#: templates/index.html:243
 msgid "Credit Card"
 msgstr ""
 
-#: templates/index.html:232
+#: templates/index.html:243
 msgid "Starting at 0€"
 msgstr ""
 
-#: templates/index.html:244
+#: templates/index.html:255
 msgid "Old school"
 msgstr ""
 
-#: templates/index.html:257
+#: templates/index.html:268
 msgid "Share the love"
 msgstr ""
 
-#: templates/index.html:262
+#: templates/index.html:273
 msgid "Make the payment & get your ebook"
 msgstr ""
 
-#: templates/index.html:274
+#: templates/index.html:285
 msgid "Contribute and download"
 msgstr ""
 
-#: templates/index.html:281
+#: templates/index.html:292
 msgid "Average payment:"
 msgstr ""
 
-#: templates/index.html:282
+#: templates/index.html:293
 msgid "Downloads:"
 msgstr ""
 
-#: templates/index.html:283
+#: templates/index.html:294
 msgid "Donations:"
 msgstr ""
 
-#: templates/index.html:284
+#: templates/index.html:295
 msgid "Minimum payment:"
 msgstr ""
 
-#: templates/index.html:284
+#: templates/index.html:295
 msgid "maximum payment:"
 msgstr ""
 
-#: templates/index.html:285
+#: templates/index.html:296
 msgid "Amount for Framasoft:"
 msgstr ""
 
-#: templates/index.html:288
+#: templates/index.html:299
 #, python-format
 msgid ""
 "20%% of the earnings are donated to the <a "
@@ -440,37 +444,37 @@ msgid ""
 "Software."
 msgstr ""
 
-#: templates/index.html:289
+#: templates/index.html:300
 msgid ""
 "The payment platform used is <a "
 "href=\"http://stripe.com\"><strong>Stripe</strong></a>."
 msgstr ""
 
-#: templates/index.html:298
+#: templates/index.html:309
 msgid "Stripe"
 msgstr ""
 
-#: templates/index.html:303
+#: templates/index.html:314
 msgid "Framasoft donation"
 msgstr ""
 
-#: templates/index.html:307
+#: templates/index.html:318
 msgid "Remaining"
 msgstr ""
 
-#: templates/index.html:309
+#: templates/index.html:320
 msgid "Repartition for 10€"
 msgstr ""
 
-#: templates/index.html:316
+#: templates/index.html:327
 msgid "Paypal account:"
 msgstr ""
 
-#: templates/index.html:320 templates/index.html:333
+#: templates/index.html:331 templates/index.html:344
 msgid "Get the ebook"
 msgstr ""
 
-#: templates/index.html:328
+#: templates/index.html:339
 msgid ""
 "<strong>Send a thank you to:</strong> <a "
 "href=\"mailto:vincent@jousse.org\">vincent@jousse.org</a>, or on Twitter "

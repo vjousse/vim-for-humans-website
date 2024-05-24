@@ -3,13 +3,21 @@ import uuid
 from datetime import datetime
 
 import stripe
-from flask import (Flask, abort, g, redirect, render_template, request,
-                   send_from_directory, url_for)
+from flask import (
+    Flask,
+    abort,
+    g,
+    redirect,
+    render_template,
+    request,
+    send_from_directory,
+    url_for,
+)
 from flask_babel import Babel, gettext
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
 
-from config import LANGUAGES, SQLALCHEMY_DATABASE_URI, STRIPE_KEYS
+from config import LANGUAGES, SQLALCHEMY_DATABASE_URI, STRIPE_KEYS, UPDATES
 
 app = Flask(__name__, static_folder="static")
 app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
@@ -72,6 +80,8 @@ def index():
     if not donation_number == 0:
         average_donation = total_donation / donation_number
 
+    current_lang = g.get("current_lang", "fr")
+
     return render_template(
         "index.html",
         key=STRIPE_KEYS["publishable_key"],
@@ -79,6 +89,7 @@ def index():
         donation_number=donation_number,
         framasoft_amount=framasoft_amount,
         average_donation="{:.2f}".format(average_donation),
+        last_update=UPDATES[current_lang],
         max=result.max,
         min=result.min,
     )

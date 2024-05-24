@@ -17,6 +17,11 @@
                     <div class="center bottommargin">
                         <a href="#" data-scrollto="#section-download" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-download"></i>{{ _('Download the ebook') }}</a>
                     </div>
+                    <div class="center bottommargin">
+                        {% if last_update %}
+                        <strong style="font-size: 16px;">{{ _('Latest update:') }} {{ last_update }}</strong>
+                        {% endif %}
+                    </div>
 
                     <div class="clear"></div>
 
@@ -212,7 +217,13 @@
 
                         <div id="section-download" class="heading-block title-center page-section">
                             <h2>{{ _('Download') }}</h2>
+
+
                             <span>{{ _('Here we are! Well, almost.') }}</span>
+
+                            {% if last_update %}
+                            <div style="font-size: 16px;margin-top: 20px;"><strong>{{ _('Latest update:') }} {{last_update}}</strong></div>
+                            {% endif %}
                         </div>
 
                         <h3>1 - {{ _('Choose your free price payment method') }}</h3>
