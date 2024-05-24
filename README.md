@@ -22,6 +22,8 @@ In this readme, I'm using 3 sample keys:
     app.app_context().push()
     db.create_all()
 
+You can use <Ctrl-d> to exit the python shell. The database should have been created under the `instance/` directory.
+
 ## Translations
 
 ### Extract strings to translate
@@ -41,6 +43,8 @@ In this readme, I'm using 3 sample keys:
 Depending on the keys, it will run in production/test mode for stripe.
 
     ENDPOINT_SECRET="whsec_AjrfPgBKPZhCnU5grqtuhDnXU5OYA9zf" PUBLISHABLE_KEY=pk_test_4aZnwTrOtTfNSxs8KtI1a3LC SECRET_KEY=sk_test_4aZnq9QgKUcJ2cPp9dGaidOT python app.py
+
+The dev server should be listening on http://localhost:5000
 
 # Supervisor
 
