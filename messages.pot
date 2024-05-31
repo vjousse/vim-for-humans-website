@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-31 15:52+0200\n"
+"POT-Creation-Date: 2024-05-31 17:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
+
+#: app.py:125 templates/confirm-layout.html:18 templates/confirm-layout.html:19
+#: templates/confirm-layout.html:20
+msgid "vim-for-humans"
+msgstr ""
 
 #: templates/cancel-layout.html:23 templates/cancel-layout.html:36
 #: templates/confirm-layout.html:76 templates/confirm-layout.html:89
@@ -41,11 +46,6 @@ msgstr ""
 #: templates/confirm-layout.html:16 templates/index.html:219
 #: templates/layout.html:80 templates/layout.html:120
 msgid "Download"
-msgstr ""
-
-#: templates/confirm-layout.html:18 templates/confirm-layout.html:19
-#: templates/confirm-layout.html:20
-msgid "vim-for-humans"
 msgstr ""
 
 #: templates/confirm-layout.html:18
@@ -477,8 +477,8 @@ msgstr ""
 #: templates/index.html:339
 msgid ""
 "<strong>Send a thank you to:</strong> <a "
-"href=\"mailto:vincent@jousse.org\">vincent@jousse.org</a>, or on Twitter "
-"to <a href=\"http://twitter.com/vjousse\">@vjousse</a>."
+"href=\"mailto:vincent@jousse.org\">vincent@jousse.org</a>, or on Mastodon"
+" to <a href=\"https://mamot.fr/@vjousse\">@vjousse</a>."
 msgstr ""
 
 #: templates/layout.html:79 templates/layout.html:120
