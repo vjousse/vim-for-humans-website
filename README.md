@@ -62,6 +62,10 @@ Supervisorctl commands:
     supervisorctl reread
     supervisorctl update
 
+# Extract parts of the PDF
+
+    pdftk vim-pour-les-humains.pdf cat 7-23 output vim-pour-les-humains-extrait.pdf
+
 # Good reads
 
 - https://eff.iciently.com/blog/stripe_checkout.html
