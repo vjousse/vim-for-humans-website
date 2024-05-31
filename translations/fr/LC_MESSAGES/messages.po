@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-31 15:28+0200\n"
+"POT-Creation-Date: 2024-05-31 15:52+0200\n"
 "PO-Revision-Date: 2015-06-15 15:24+0200\n"
 "Last-Translator: Vincent Jousse <vincent@jousse.org>\n"
 "Language: fr\n"
@@ -310,7 +310,6 @@ msgid "Usable Vim"
 msgstr "Rendre Vim utilisable"
 
 #: templates/index.html:138
-#, fuzzy, python-format
 msgid ""
 "In this chapter we see how to configure Vim to make it usable by a "
 "\"normal\" human. Syntax highlighting, file explorer (vim-fern), color "
@@ -349,13 +348,12 @@ msgstr "Les plugins indispensables"
 #: templates/index.html:153
 msgid ""
 "In this chapter, we put Vim to the next level. We add plugins such as "
-"Lusty Explorer (file explorer using the keyboard), Ack (file search) or "
-"Ctrl-p (fast searching/opening of files)."
+"Lusty Explorer (file explorer using the keyboard) or fzf (searching "
+"everything everywhere)."
 msgstr ""
 "Dans ce chapitre, nous faisons passer Vim au niveau supérieur. Nous lui "
 "ajoutons des plugins tels que Lusty Explorer (explorateur de fichiers au "
-"clavier), Ack (recherche dans les fichiers) ou encore Ctrl-p (recherche /"
-" ouverture rapide de fichiers)."
+"clavier) ou encore fzf (recherche de tout partout)."
 
 #: templates/index.html:157
 msgid "Cheatsheet & examples"
