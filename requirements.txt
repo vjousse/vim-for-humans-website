@@ -19,5 +19,5 @@ requests==2.32.2
 SQLAlchemy==2.0.30
 stripe==9.8.0
 typing_extensions==4.12.0
-urllib3==2.2.1
+urllib3==2.2.2
 Werkzeug==3.0.3
